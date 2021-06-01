@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :coaches
   resources :lists
 
-  get '/signup', to: "readers#new", as: "signup" 
-    post '/signup', to: "readers#create"
+  get '/signup', to: "coaches#new", as: "signup" 
+    post '/signup', to: "coaches#create"
 
     get '/login', to: "sessions#new", as: "login" 
     post '/login', to: "sessions#create"
