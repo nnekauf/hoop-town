@@ -1,5 +1,4 @@
-class CoachsController < ApplicationController
-
+class CoachesController < ApplicationController
     def index
         render json: Coach.all #, key_transform: :camel_lower
     end

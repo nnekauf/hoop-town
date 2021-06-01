@@ -10,22 +10,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_034336) do
+ActiveRecord::Schema.define(version: 2021_06_01_064955) do
 
-  create_table "bists", force: :cascade do |t|
-    t.string "name"
+  create_table "coaches", force: :cascade do |t|
+    t.string "email"
+    t.string "username"
+    t.integer "contact_number"
+    t.string "password_digest"
+    t.text "bio"
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "players", force: :cascade do |t|
-    t.string "name"
-    t.integer "list_id", null: false
+    t.string "email"
+    t.string "username"
+    t.integer "contact_number"
+    t.string "password_digest"
+    t.text "bio"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "coach_id", null: false
+    t.integer "team_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "rank"
-    t.index ["list_id"], name: "index_players_on_list_id"
+    t.index ["coach_id"], name: "index_players_on_coach_id"
+    t.index ["team_id"], name: "index_players_on_team_id"
   end
 
-  add_foreign_key "players", "lists"
+  create_table "registrations", force: :cascade do |t|
+    t.integer "team_id", null: false
+    t.integer "tournamnent_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["team_id"], name: "index_registrations_on_team_id"
+    t.index ["tournamnent_id"], name: "index_registrations_on_tournamnent_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.integer "coach_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["coach_id"], name: "index_teams_on_coach_id"
+  end
+
+  create_table "tournaments", force: :cascade do |t|
+    t.string "name"
+    t.string "venue"
+    t.string "address"
+    t.date "date"
+    t.time "time"
+    t.string "host"
+    t.text "about"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "players", "coaches"
+  add_foreign_key "players", "teams"
+  add_foreign_key "registrations", "teams"
+  add_foreign_key "registrations", "tournamnents"
+  add_foreign_key "teams", "coaches"
 end
