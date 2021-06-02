@@ -2,6 +2,6 @@ class Player < ApplicationRecord
 
   validates :name, uniqueness: true
 
-  belongs_to :coach
+  has_one :coach, through: :team
   belongs_to :team
 end

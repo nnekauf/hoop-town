@@ -32,11 +32,9 @@ ActiveRecord::Schema.define(version: 2021_06_01_064955) do
     t.text "bio"
     t.string "first_name"
     t.string "last_name"
-    t.integer "coach_id", null: false
     t.integer "team_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["coach_id"], name: "index_players_on_coach_id"
     t.index ["team_id"], name: "index_players_on_team_id"
   end
 
@@ -69,7 +67,6 @@ ActiveRecord::Schema.define(version: 2021_06_01_064955) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "players", "coaches"
   add_foreign_key "players", "teams"
   add_foreign_key "registrations", "teams"
   add_foreign_key "registrations", "tournamnents"

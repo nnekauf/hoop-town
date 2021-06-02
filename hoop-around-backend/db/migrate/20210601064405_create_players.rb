@@ -8,7 +8,6 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.text :bio
       t.string :first_name
       t.string :last_name
-      t.belongs_to :coach, null: false, foreign_key: true
       t.belongs_to :team, null: false, foreign_key: true
 
       t.timestamps
