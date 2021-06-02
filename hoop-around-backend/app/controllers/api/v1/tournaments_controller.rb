@@ -1,4 +1,4 @@
-class TournamentsController < ApplicationController
+class Api::V1::TournamentsController < ApplicationController
     def index
         render json: Tournament.all #, key_transform: :camel_lower
     end

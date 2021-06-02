@@ -1,4 +1,4 @@
-class PlayersController < ApplicationController
+class Api::V1::PlayersController < ApplicationController
     before_action(:upcase_name, only: [:create]) 
 
     def upcase_name

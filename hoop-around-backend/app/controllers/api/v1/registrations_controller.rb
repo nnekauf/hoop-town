@@ -1,4 +1,4 @@
-class RegistrationsController < ApplicationController
+class Api::V1::RegistrationsController < ApplicationController
     def index
         render json: Registration.all #, key_transform: :camel_lower
     end

@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::V1::SessionsController < ApplicationController
 # before_save :send_email  #this can be used to handle sign ups via fb
     def new
       @errors = []

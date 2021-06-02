@@ -1,4 +1,4 @@
-class TeamsController < ApplicationController
+class Api::V1::TeamsController < ApplicationController
     def index
         render json: Team.all #, key_transform: :camel_lower
     end
