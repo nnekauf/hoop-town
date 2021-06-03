@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
 
   
-  resources :users
+  
   namespace :api do
     namespace :v1 do
       resources :registrations
       resources :tournaments
       resources :teams
-      resources :players
-      resources :coaches
+      # resources :players
+      # resources :coaches
+      resources :users
       resources :lists
-  
+      
       # get '/signup', to: "coaches#new", as: "signup" 
       #   post '/signup', to: "coaches#create"
     
