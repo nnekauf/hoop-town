@@ -12,32 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_06_03_064518) do
 
-  create_table "coaches", force: :cascade do |t|
-    t.string "email"
-    t.string "username"
-    t.integer "contact_number"
-    t.string "password_digest"
-    t.text "bio"
-    t.string "first_name"
-    t.string "last_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "players", force: :cascade do |t|
-    t.string "email"
-    t.string "username"
-    t.integer "contact_number"
-    t.string "password_digest"
-    t.text "bio"
-    t.string "first_name"
-    t.string "last_name"
-    t.integer "team_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["team_id"], name: "index_players_on_team_id"
-  end
-
   create_table "registrations", force: :cascade do |t|
     t.integer "team_id", null: false
     t.integer "tournament_id", null: false
@@ -49,10 +23,8 @@ ActiveRecord::Schema.define(version: 2021_06_03_064518) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.integer "coach_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["coach_id"], name: "index_teams_on_coach_id"
   end
 
   create_table "tournaments", force: :cascade do |t|
@@ -79,8 +51,6 @@ ActiveRecord::Schema.define(version: 2021_06_03_064518) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "players", "teams"
   add_foreign_key "registrations", "teams"
   add_foreign_key "registrations", "tournaments"
-  add_foreign_key "teams", "coaches"
 end
