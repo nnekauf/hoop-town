@@ -5,16 +5,20 @@ class Api::V1::SessionsController < ApplicationController
     end
 
     def create
-        @user = User.find_by(username: params[:user][:username])
-        if @user && @user.authenticate(params[:user][:password])
+        @user = User.find_by(username: params[:session][:username])
+        if @user && @user.authenticate(params[:session][:password])
             session[:user_id] = @user.id
-            redirect_to "/home"
+            render json: UserSerializer.new(@user)
         elsif @user
-            @errors = ["Invalid Password"]
-            render :new
+            render json: {
+              error: "Invalid Password"
+            }
+     
           else
-            @errors = ["Invalid Username"]
-            render :new
+            render json: {
+              error: "Invalid Username"
+            }
+ 
           end
     end
 
