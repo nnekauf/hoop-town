@@ -30,9 +30,11 @@ class Api::V1::SessionsController < ApplicationController
         end
         if user.save
           session[:user_id] = user.id
-          redirect_to "/users"
+          render json: UserSerializer.new(@user)
         else
-          redirect_to signup_path
+          render json: {
+              error: "Invalid Credentials"
+            }
         end
     end
     
