@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::API
-#     helper_method(:current_user, :logged_in?, :redirect_if_not_reader)
-# #I want current user, is_coach? is_player? 
+#     helper_method(:current_user, :logged_in?, :redirect_if_not_user)
+# # #I want current user, is_coach? is_player? 
 #     def current_user
-#         @current_user = Reader.find_by(id: session[:reader_id])
+#         @current_user = User.find_by(id: session[:user_id])
 #     end
 
 #     def logged_in?
@@ -14,12 +14,12 @@ class ApplicationController < ActionController::API
 #     end
     
     
-#     def check_reader(reader)
-#         reader.id == current_user.id
+#     def check_user(user)
+#         user.id == current_user.id
 #     end
   
-#     def redirect_if_not_reader(reader)
-#         if !check_reader(reader)
+#     def redirect_if_not_user(user)
+#         if !check_user(user)
 #             if params.to_s.include?("reviews")
 #           flash[:message] = "Sorry, this is not your review!"
 #             elsif params..to_s.include?("reviews")
