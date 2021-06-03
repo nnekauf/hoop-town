@@ -1,6 +1,6 @@
 class Player < ApplicationRecord
   belongs_to :team
-  has_one :coach, through: :team
+  has_one :coach, :class_name => "User", through: :team
   
 
   has_secure_password 
