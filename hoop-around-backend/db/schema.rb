@@ -59,8 +59,7 @@ ActiveRecord::Schema.define(version: 2021_06_01_064955) do
     t.string "name"
     t.string "venue"
     t.string "address"
-    t.date "date"
-    t.time "time"
+    t.datetime "date_time"
     t.string "host"
     t.text "about"
     t.datetime "created_at", precision: 6, null: false
