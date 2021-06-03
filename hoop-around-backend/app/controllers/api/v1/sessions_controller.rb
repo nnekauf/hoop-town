@@ -38,7 +38,9 @@ class Api::V1::SessionsController < ApplicationController
     
     def destroy
         session.clear
-        redirect_to '/login'
+        render json: {
+          notice: "successfully logged out"
+        }, status: :ok
     end
 
     private
