@@ -11,7 +11,7 @@ Coach.create(email: "thomas@bkballers.com", username: "thomas" , password: "pass
 Coach.create(email: "mekel@hoopers.com", username: "mekelcoach" , password: "password", bio: "Been coaching since 5", first_name: "Mekel", last_name:"B", contact_number: 4448880978)
 
 Player.create(email: "johnny@bkballers.com", username: "johnny" , password: "password", bio: "Been balling since '98", first_name: "Johnny", last_name:"Johnson", contact_number: 9997770978, team_id: 1)
-Player.create(email: "tyler@hoopers.com", username: "johnny" , password: "password", bio: "Been hooping since '98", first_name: "Tyler", last_name:"Johnson", contact_number: 4447770978, team_id: 2)
+Player.create(email: "tyler@hoopers.com", username: "tyler" , password: "password", bio: "Been hooping since '98", first_name: "Tyler", last_name:"Johnson", contact_number: 4447770978, team_id: 2)
 
 Team.create(name: "Brooklyn Ballers", coach_id: 1)
 Team.create(name: "Hoopers", coach_id: 2)
