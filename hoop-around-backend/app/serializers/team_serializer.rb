@@ -1,4 +1,4 @@
 class TeamSerializer < ActiveModel::Serializer
-  attributes :id, :name
-  belongs_to :coach
+  attributes :id, :name, :coach, :player
+
 end

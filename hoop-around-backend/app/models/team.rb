@@ -1,8 +1,10 @@
 class Team < ApplicationRecord
   # has_one :coach, :class_name => "User"
   # has_many :players, :class_name => "User"
-  has_one :coach, -> { where("users.role = ?", User.roles[:coach]) }
-  has_many :players, -> { where("users.role = ?", User.roles[:player]) }
+  # has_many :users
+  has_many :player, -> { where(role: [:player]) }, :class_name => "User"
+  has_many :coach, -> { where(role: [:coach]) }, :class_name => "User"
+  # has_many :players, -> { where(role: [:player]) }, :class_name => "User"
 
   has_many :registrations
   has_many :tournaments, through: :registrations 

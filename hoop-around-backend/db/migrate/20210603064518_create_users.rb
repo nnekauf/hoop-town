@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.text :bio
       t.string :first_name
       t.string :last_name
-      t.integer :role
+      t.integer :role, default: 0
 
       t.timestamps
     end

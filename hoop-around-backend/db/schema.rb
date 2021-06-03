@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_06_03_081457) do
     t.text "bio"
     t.string "first_name"
     t.string "last_name"
-    t.integer "role"
+    t.integer "role", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "team_id"
