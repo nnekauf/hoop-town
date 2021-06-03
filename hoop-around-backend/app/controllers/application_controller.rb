@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-    helper_method(:current_user, :logged_in?, :coach_or_player, :only_coach)
+  
 # #I want current user, is_coach? is_player? 
     def current_user
         @current_user = User.find_by(id: session[:user_id])
@@ -30,7 +30,7 @@ class ApplicationController < ActionController::API
         if user.coach_or_player != "coach"
             render json: {error: 'You must be a coach to do that'}
         end
-
+    end
     # def redirect_if_not_user(user)
     #     if !check_user(user)
     #         if params.to_s.include?("reviews")
