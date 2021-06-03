@@ -1,15 +1,15 @@
 class Api::V1::PlayersController < ApplicationController
-    before_action(:upcase_name, only: [:create]) 
+    # before_action(:upcase_name, only: [:create]) 
 
-    def upcase_name
+    # def upcase_name
         
-        player_params["name"].upcase!
-    end
+    #     player_params["name"].upcase!
+    # end
     
     def index
         players = Player.all
        
-        render json: players.order(rank: :asc) #, key_transform: :camel_lower
+        render json: players
     end
 
     def show
