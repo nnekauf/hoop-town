@@ -18,5 +18,5 @@ Team.create(name: "Hoopers", coach_id: 2)
 
 Tournament.create(name: "Hoop Stars", venue: "BKG Gym", address: "231 Ballhill Road New York, NY 11234", date_time: DateTime.parse("17/07/2021 11:00"), host: "Brooklyn Ballers", about: "Lets see who's the best in Brooklyn")
 
-# Registration.create(team_id: 1, tournament_id: 1)
-# Registration.create(team_id: 2, tournament_id: 1)
+Registration.create(team_id: 1, tournament_id: 1)
+Registration.create(team_id: 2, tournament_id: 1)
