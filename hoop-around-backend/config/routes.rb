@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  
   namespace :api do
     namespace :v1 do
       resources :registrations
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :players
       resources :coaches
       resources :lists
-    
+  
       # get '/signup', to: "coaches#new", as: "signup" 
       #   post '/signup', to: "coaches#create"
     
