@@ -1,6 +1,7 @@
 class Api::V1::TournamentsController < ApplicationController
     def index
-        render json: Tournament.all #, key_transform: :camel_lower
+        tournaments = Tournament.all
+        render json: tournaments 
     end
 
     def show
@@ -9,7 +10,7 @@ class Api::V1::TournamentsController < ApplicationController
         render json: tournament
     end
 
-    def creatt
+    def create
        
         tournament = Tournament.create(tournament_params)
         render json: tournament

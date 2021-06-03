@@ -1,3 +1,3 @@
 class TournamentSerializer < ActiveModel::Serializer
-  attributes :id, :name, :venue, :address, :date, :time, :host, :about
+  attributes :id, :name, :venue, :address, :date_time, :host, :about
 end
