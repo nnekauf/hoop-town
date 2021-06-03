@@ -7,7 +7,3 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
-# Player.create(name: "Kyrie Irving", rank: 1, list_id: 1)
-
-
