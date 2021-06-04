@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import App from './App';
+import {createStore, combineReducers, compose, applyMiddleware} from 'redux'
+import listsReducer from './reducers/listsReducer'
+import {composeWithDevTools} from 'redux-devtools-extension'
+import {Provider} from 'react-redux'
+import thunk from 'redux-thunk'
 
+const users = () => []
 
-ReactDOM.render(
-  <React.StrictMode>
+const reducer = combineReducers({
+  users
+})
+
+const store = createStore(listsReducer, initialState, compose(applyMiddleware(thunk), composeWithDevTools()))
+
+ReactDOM.render( 
+  <Provider store ={store}> 
     <App />
-  </React.StrictMode>,
+  </Provider>
+ 
+  ,
+
   document.getElementById('root')
 );
 
