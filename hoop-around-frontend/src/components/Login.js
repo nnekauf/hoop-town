@@ -6,7 +6,12 @@ import { login } from "../actions/currentUser.js"
 const Login = ({loginFormData, updateLoginForm, login,}) => {
 
     const handleInputChange = event => {
-        
+        const { name, value } = event.target
+        const updatedFormInfo = {
+          ...loginFormData,
+          [name]: value
+        }
+        updateLoginForm(updatedFormInfo)  
       }
     
       const handleSubmit = event => {
