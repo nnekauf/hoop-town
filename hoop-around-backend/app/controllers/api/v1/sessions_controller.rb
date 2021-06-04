@@ -22,6 +22,16 @@ class Api::V1::SessionsController < ApplicationController
           end
     end
 
+    def get_current_user
+      if logged_in?
+        render json: UserSerializer.new(current_user)
+      else
+        render json: {
+          error: "No one logged in"
+        }
+      end
+    end
+    
     def create_with_fb #log in/sign up with facebook
         
         user = User.find_or_create_by(username: fb_auth['info']['username'], username: fb_auth['info']['name']) do |r|
