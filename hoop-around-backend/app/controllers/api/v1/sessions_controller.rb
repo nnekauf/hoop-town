@@ -4,7 +4,7 @@ class Api::V1::SessionsController < ApplicationController
       @errors = []
     end
 
-    def create
+    def create #log in
         @user = User.find_by(username: params[:session][:username])
         if @user && @user.authenticate(params[:session][:password])
             session[:user_id] = @user.id
@@ -22,7 +22,7 @@ class Api::V1::SessionsController < ApplicationController
           end
     end
 
-    def create_with_fb
+    def create_with_fb #log in/sign up with facebook
         
         user = User.find_or_create_by(username: fb_auth['info']['username'], username: fb_auth['info']['name']) do |r|
           r.password = 'password' #we set their password here and it doesn't matter what it is, could autogenerate it
@@ -38,7 +38,7 @@ class Api::V1::SessionsController < ApplicationController
         end
     end
     
-    def destroy
+    def destroy #logout
         session.clear
         render json: {
           notice: "successfully logged out"

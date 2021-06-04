@@ -6,7 +6,7 @@ class Api::V1::UsersController < ApplicationController
     #     user_params["name"].upcase!
     # end
     
-    def index
+    def index 
         users = User.all
        
         render json: users
@@ -18,7 +18,7 @@ class Api::V1::UsersController < ApplicationController
         render json: user
     end
 
-    def create
+    def create #signup
         # user = User.create(User_params)
        
         user = User.new(user_params)
@@ -31,7 +31,7 @@ class Api::V1::UsersController < ApplicationController
     
     end
 
-    def destroy
+    def destroy #delete account
         user = User.find_by(id: params[:id])
         
         user.destroy
