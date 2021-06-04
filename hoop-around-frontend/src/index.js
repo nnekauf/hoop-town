@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import {BrowserRouter as Router} from 'react-router-dom'
 import {createStore, combineReducers, compose, applyMiddleware} from 'redux'
 import listsReducer from './reducers/listsReducer'
 import {composeWithDevTools} from 'redux-devtools-extension'
