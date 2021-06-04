@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  
+  post "/api/v1/login", to: "api/v1/sessions#create"
+  post "/api/v1/signup", to: "api/v1/users#create"
+  delete "/api/v1/logout", to: "api/v1/sessions#destroy"
+  get "/api/v1/get_current_user", to: "api/v1/sessions#get_current_user"
   
   namespace :api do
     namespace :v1 do
@@ -12,12 +15,7 @@ Rails.application.routes.draw do
       resources :users
       resources :lists
       
-      # get '/signup', to: "coaches#new", as: "signup" 
-      #   post '/signup', to: "coaches#create"
-    
-      #   get '/login', to: "sessions#new", as: "login" 
-      #   post '/login', to: "sessions#create"
-      #   post '/logout', to: "sessions#destroy" 
+       post '/logout', to: "sessions#destroy" 
     
       #   get "/auth/facebook/callback", to: "sessions#create_with_fb"
     end
