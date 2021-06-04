@@ -9,9 +9,17 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 
-const initialState = {lists: []}
-const store = createStore(listsReducer, initialState, compose(applyMiddleware(thunk), composeWithDevTools()))
-const combinedReducer = combineReducers({lists: listsReducer, users: usersReducer})
+// const initialState = {lists: []}
+
+const combinedReducer = combineReducers({
+  lists: listsReducer, 
+  users: usersReducer
+})
+
+const store = createStore(combinedReducer, compose(applyMiddleware(thunk), composeWithDevTools()))
+
+
+
 ReactDOM.render(
   <Router >
     <Provider store={store}>

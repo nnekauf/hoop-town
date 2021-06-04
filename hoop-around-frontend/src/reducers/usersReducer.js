@@ -1,1 +1,6 @@
-export default function usersReducer(state = {users: []}, action) {}
+export default (state = [], action) => {
+    switch (action.type) {
+        default:
+            return state
+    }
+}
