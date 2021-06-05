@@ -9,7 +9,7 @@ export const setCurrentUser = user => {
 
 
 // asych
-export const login = (credentials) => {
+export const getCurrentUser = (credentials) => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/login", {
             method: "POST",
