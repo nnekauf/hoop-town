@@ -12,7 +12,7 @@ export const setCurrentUser = user => {
 export const getCurrentUser = (credentials) => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/login", {
-            method: "POST",
+            method: "GET",
             headers: {
                 "Content-Type": "application/json"
               },
