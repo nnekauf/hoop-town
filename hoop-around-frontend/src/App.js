@@ -5,13 +5,13 @@ import Login from "./components/Login"
 
 class App extends React.Component {
 
-  // componentDidMount() {
-  //   fetch ('http://localhost:3000/api/v1/users', {
-  //     method: "GET"
-  //   })
-  //   .then(r=>r.json())
-  //   .then(r=> console.log(r))
-  // }
+  componentDidMount() {
+    fetch ('http://localhost:3000/api/v1/get_current_user', {
+      method: "GET"
+    })
+    .then(r=>r.json())
+    .then(r=> console.log(r))
+  }
 
   render(){
     return (
