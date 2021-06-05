@@ -9,10 +9,33 @@ export const setCurrentUser = user => {
 
 
 // asych
+
+
 export const getCurrentUser = (credentials) => {
     return dispatch => {
-        return fetch("http://localhost:3000/api/v1/login", {
+        return fetch("http://localhost:3000/api/v1/get_current_user", {
             method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(credentials)
+        })
+        .then (response => response.json())
+        .then (r => {
+            if (r.error) {
+                alert(r.error)
+            } else {
+                dispatch(setCurrentUser(r))
+            }
+        })
+        .catch(console.log)
+    }
+}
+
+export const login = (credentials) => {
+    return dispatch => {
+        return fetch("http://localhost:3000/api/v1/login", {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
               },
