@@ -54,3 +54,14 @@ export const login = (credentials) => {
         .catch(console.log)
     }
 }
+
+export const logout = () => {
+    return dispatch => {
+         dispatch(clearCurrentUser())
+        return fetch("http://localhost:3000/api/v1/logout", {
+            credentials: "include",
+            method: "DELETE",
+            
+        })
+    }
+}
