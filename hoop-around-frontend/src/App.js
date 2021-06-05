@@ -14,12 +14,19 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <Login/>
-        <Logout/>
+       {this.props.loggedIn ? <Logout/> :
+        <Login/>}
       </div>
     );
     }
 
 }
 
-export default connect(null, {getCurrentUser})(App);
+const mapStateToProps = state => {
+  return ({
+    loggedIn: !!state.currentUser,
+    
+  })
+}
+
+export default connect(mapStateToProps, {getCurrentUser})(App);
