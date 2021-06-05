@@ -7,11 +7,7 @@ import {getCurrentUser} from "./actions/currentUser"
 class App extends React.Component {
 
   componentDidMount() {
-    fetch ('http://localhost:3000/api/v1/get_current_user', {
-      method: "GET"
-    })
-    .then(r=>r.json())
-    .then(r=> console.log(r))
+    getCurrentUser()
   }
 
   render(){
@@ -24,4 +20,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default connect(null, {getCurrentUser})(App);
