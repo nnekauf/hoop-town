@@ -1,0 +1,42 @@
+import React from 'react'
+import { connect } from 'react-redux'
+import { updateLoginForm } from "../actions/loginForm.js"
+import { signup } from "../actions/currentUser.js"
+
+const Signup = ({credentials, updateLoginForm, signup}) => {
+
+    const handleInputChange = event => {
+        const { name, value } = event.target
+        const updatedFormInfo = {
+          ...credentials,
+          [name]: value
+        }
+        updateLoginForm(updatedFormInfo)  
+      }
+    
+      const handleSubmit = event => {
+        event.preventDefault()
+        signup(credentials)
+      }
+    
+    
+    return (
+      <form onSubmit={handleSubmit}>
+        <input placeholder="First Name"  value={credentials.firstName} name="firstName" type="text" onChange={handleInputChange} />
+        <input placeholder="Last Name"  value={credentials.lastName} name="lastName" type="text" onChange={handleInputChange} />
+        <input placeholder="Username"  value={credentials.username} name="username" type="text" onChange={handleInputChange} />
+        <input placeholder="Email"  value={credentials.email} name="email" type="email" onChange={handleInputChange} />
+        <input placeholder="Password"  value={credentials.password} name="password" type="password" onChange={handleInputChange} />
+        <input placeholder="Confirm Password"  value={credentials.passwordConfirmation} name="passwordConfirmation" type="password" onChange={handleInputChange} />
+        <input type="submit" value="Sign Up"/>
+      </form>
+    )
+  }
+// I somehow need to integrate what type of account is this to set the type of user
+  const mapStateToProps = state => {
+    return {
+      credentials: state.loginForm
+    }
+  }
+  
+  export default connect(mapStateToProps, {updateLoginForm, signup} )(Signup)
