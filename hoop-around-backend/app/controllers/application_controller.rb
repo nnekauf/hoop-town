@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  
+  include :: ActionController::Cookies
 # #I want current user, is_coach? is_player? 
     def current_user
         @current_user = User.find_by(id: session[:user_id])
