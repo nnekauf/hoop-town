@@ -1,6 +1,6 @@
 //synchronout
 
-export const getAllTournaments = tournament => {
+export const showAllTournaments = tournament => {
     return {
         type: "ALL",
         tournament
@@ -11,7 +11,7 @@ export const getAllTournaments = tournament => {
 // asych
 
 
-export const allTournaments = () => {
+export const getAllTournaments = () => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/tournaments", {
             credentials: "include",
@@ -26,7 +26,7 @@ export const allTournaments = () => {
             if (r.error) {
                 alert(r.error)
             } else {
-                dispatch(getAllTournaments(r))
+                dispatch(showAllTournaments(r))
             }
         })
         .catch(console.log)

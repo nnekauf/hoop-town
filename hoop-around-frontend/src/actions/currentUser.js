@@ -1,5 +1,7 @@
-//synchronout
 
+import { resetLoginForm } from "./loginForm.js"
+import { resetSignupForm } from "./signupForm.js"
+//synchronout
 export const setCurrentUser = user => {
     return {
         type: "SET_CURRENT_USER",
@@ -55,6 +57,7 @@ export const login = (credentials) => {
                 alert(r.error)
             } else {
                 dispatch(setCurrentUser(r))
+                dispatch(resetLoginForm())
             }
         })
         .catch(console.log)
@@ -102,6 +105,7 @@ export const signup = (credentials) => {
                 alert(r.error)
             } else {
                 dispatch(setCurrentUser(r))
+                dispatch(resetSignupForm())
             }
         })
         .catch(console.log)
