@@ -34,7 +34,7 @@ const NavBar = ({ state, loggedIn }) => {
         <NavLink exact activeClassName="active" to="/tournaments"> Find Tournaments </NavLink>
         <NavLink exact activeClassName="active" to="/tournaments"> My Games </NavLink>
         <NavLink exact activeClassName="active" to="/tournaments"> Profile </NavLink>
-        <NavLink exact activeClassName="active" to="/tournaments"> Create Event </NavLink>
+          { state.currentUser.role === "coach" ? <><NavLink exact activeClassName="active" to="/tournaments"> Create Event </NavLink> </> : null}
         <Logout/>
         </>   
       :
