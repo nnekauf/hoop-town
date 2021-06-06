@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 // import { updateLoginForm } from "../actions/loginForm.js"
 import { getAllTournaments} from "../actions/tournaments"
 import { allTournaments} from "../actions/tournaments"
+import tournaments from '../reducers/tournaments'
 
 const Tournaments = ({getAllTournaments}) => {
 
@@ -17,16 +18,21 @@ const Tournaments = ({getAllTournaments}) => {
     // add a filter form eventually
     return (
       <>
-      <div className = "tournamentCard" onClick ={renderEventPage}>
+      { tournaments.map = (t) => {
+        <div className = "tournamentCard" onClick ={renderEventPage}>
+        {t.name}
+        </div>
+      }
 
-      </div>
+      }
+      
       </>
     )
   }
 
   const mapStateToProps = state => {
     return {
-      loginFormData: state.loginForm
+      tournaments: state.tournaments
     }
   }
   
