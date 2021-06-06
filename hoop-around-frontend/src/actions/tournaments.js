@@ -27,6 +27,7 @@ export const getAllTournaments = () => {
                 alert(r.error)
             } else {
                 dispatch(showAllTournaments(r))
+    
             }
         })
         .catch(console.log)

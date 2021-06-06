@@ -1,6 +1,7 @@
 
 import { resetLoginForm } from "./loginForm.js"
 import { resetSignupForm } from "./signupForm.js"
+import { getAllTournaments } from "./tournaments.js"
 //synchronout
 export const setCurrentUser = user => {
     return {
@@ -35,6 +36,7 @@ export const getCurrentUser = (credentials) => {
                 alert(r.error)
             } else {
                 dispatch(setCurrentUser(r))
+                dispatch(getAllTournaments())
             }
         })
         .catch(console.log)
@@ -57,6 +59,7 @@ export const login = (credentials) => {
                 alert(r.error)
             } else {
                 dispatch(setCurrentUser(r))
+                
                 dispatch(resetLoginForm())
             }
         })

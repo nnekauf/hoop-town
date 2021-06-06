@@ -1,6 +1,6 @@
 class Api::V1::TournamentsController < ApplicationController
     #set before action that user must be a coach except to view
-    before_action(:require_login, :only_coach, except: {index, :show})
+    # before_action(:require_login, :only_coach, except: {index, :show})
     def index
         tournaments = Tournament.all
         render json: tournaments 

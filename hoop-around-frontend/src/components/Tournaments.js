@@ -1,30 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import { updateLoginForm } from "../actions/loginForm.js"
-import { getAllTournaments} from "../actions/tournaments"
-import { showAllTournaments} from "../actions/tournaments"
-import tournaments from '../reducers/tournaments'
+import { Link } from 'react-router-dom'
 
-const Tournaments = ({ getAllTournaments}) => {
+const Tournaments = props => {
 
+    const tournamentCard = props.tournaments.length >0 ?
+    props.tournaments.map(t => (<p key={t.id}><Link to={`/tournaments/${t.id}`}>{t.name}</Link></p>)) :
+    null
 
+  return tournamentCard
     
-      const renderEventPage = event => {
-        // event.preventDefault()
-        // getAllTournaments(loginFormData)
-        // here I will render the events individual page
-      }
-      
-    // add a filter form eventually
-    return (
-      <>
-        <div className = "tournamentCard" onClick ={renderEventPage}>
-            Tournaments Page Here
-        </div>
-
-  
-      </>
-    )
   }
 
   const mapStateToProps = state => {
@@ -33,4 +18,4 @@ const Tournaments = ({ getAllTournaments}) => {
     }
   }
   
-  export default connect(mapStateToProps, { getAllTournaments} )(Tournaments)
+  export default connect(mapStateToProps)(Tournaments)
