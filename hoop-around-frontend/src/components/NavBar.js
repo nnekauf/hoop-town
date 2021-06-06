@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import Logout from './Logout'
+import Login from './Login'
+import Signup from './Signup'
 
 const NavBar = ({ state, loggedIn }) => {
   // { if (loggedIn) { 
@@ -24,15 +26,25 @@ const NavBar = ({ state, loggedIn }) => {
   //     )
   //   }
   return (
-        <div className="NavBar">
-        
-            role name
-            <NavLink exact activeClassName="active" to="/tournaments" Find Tournaments ></NavLink>
-            <NavLink exact activeClassName="active" to="/tournaments"> New Trip </NavLink>
-         <Logout/>
-  
-           
-      </div>)
+       
+    <div className="NavBar">
+      { loggedIn ?
+       <>
+        {state.currentUser.role} {state.currentUser.first_name}
+        <NavLink exact activeClassName="active" to="/tournaments"> Find Tournaments </NavLink>
+        <NavLink exact activeClassName="active" to="/tournaments"> My Games </NavLink>
+        <NavLink exact activeClassName="active" to="/tournaments"> Profile </NavLink>
+        <NavLink exact activeClassName="active" to="/tournaments"> Create Event </NavLink>
+        <Logout/>
+        </>   
+      :
+        <>
+          <Login/>
+          <Signup/>
+        </>
+      }
+    </div>
+  )
   }
 // { loggedIn ? <><p id="loggedin">Logged in as {state.attributes.firstName}</p><Logout/></> : null}
   const mapStateToProps = state => {
