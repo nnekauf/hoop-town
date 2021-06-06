@@ -6,25 +6,7 @@ import Login from './Login'
 import Signup from './Signup'
 
 const NavBar = ({ state, loggedIn }) => {
-  // { if (loggedIn) { 
-  //   return (
-  //     <div className="NavBar">
-      
-  //         {state.currentUser.role} {state.currentUser.first_name}
-  //         <NavLink exact activeClassName="active" to="/tournaments" Find Tournaments ></NavLink>
-  //         <NavLink exact activeClassName="active" to="/tournaments"> New Trip </NavLink>
-  //      <Logout/>
-
-  //       )  
-  //   </div>)
-
-  //  } else {
-  //     return (
-  //       <div className="NavBar">
-  //           <NavLink exact activeClassName="active" to="/loogin" >New Trip</NavLink>
-  //       </div>
-  //     )
-  //   }
+  
   return (
        
     <div className="NavBar">
@@ -32,9 +14,15 @@ const NavBar = ({ state, loggedIn }) => {
        <>
         {state.currentUser.role} {state.currentUser.first_name}
         <NavLink exact activeClassName="active" to="/tournaments"> Find Tournaments </NavLink>
-        <NavLink exact activeClassName="active" to="/tournaments"> My Games </NavLink>
-        <NavLink exact activeClassName="active" to="/tournaments"> Profile </NavLink>
-          { state.currentUser.role === "coach" ? <><NavLink exact activeClassName="active" to="/tournaments"> Create Event </NavLink> </> : null}
+        <NavLink exact activeClassName="active" to="/mygames"> My Games </NavLink>
+        <NavLink exact activeClassName="active" to="/myprofile"> Profile </NavLink>
+          { state.currentUser.role === "coach" ? 
+            <>
+              <NavLink exact activeClassName="active" to="/event/new"> Create Event </NavLink> 
+            </> 
+            : 
+              null
+          }
         <Logout/>
         </>   
       :
@@ -46,7 +34,7 @@ const NavBar = ({ state, loggedIn }) => {
     </div>
   )
   }
-// { loggedIn ? <><p id="loggedin">Logged in as {state.attributes.firstName}</p><Logout/></> : null}
+
   const mapStateToProps = state => {
     return ({
       state,
