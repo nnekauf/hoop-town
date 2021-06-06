@@ -73,6 +73,20 @@ export const logout = () => {
 }
 
 export const signup = (credentials) => {
+    const body = {
+        user: {
+            first_name: credentials.firstName,
+            last_name: credentials.astName,
+            email: credentials.email,
+            username: credentials.username,
+            contact_number: credentials.number,
+            password_digest: credentials.password,
+            password_confirmation: credentials.passwordConfirmation,
+            bio: credentials.bio,
+            role: credentials.role
+
+        }
+    }
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/signup", {
             credentials: "include",
@@ -80,7 +94,7 @@ export const signup = (credentials) => {
             headers: {
                 "Content-Type": "application/json"
               },
-              body: JSON.stringify(credentials)
+              body: JSON.stringify(body)
         })
         .then (response => response.json())
         .then (r => {
