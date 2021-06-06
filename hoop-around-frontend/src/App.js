@@ -1,14 +1,14 @@
 import React from 'react'
 import './App.css'
-import Login from "./components/Login"
-import Logout from "./components/Logout"
-import Signup from "./components/Signup"
-import Tournaments from "./components/Tournaments"
-import NavBar from "./components/NavBar"
 import {connect} from 'react-redux'
 import {getCurrentUser} from "./actions/currentUser"
-// import { Route, Switch, withRouter } from 'react-router-dom'
-import { Route} from 'react-router-dom'
+import NavBar from "./components/NavBar"
+import Login from "./components/Login"
+import Signup from "./components/Signup"
+import Tournaments from "./components/Tournaments"
+import { Route, Switch, withRouter } from 'react-router-dom'
+// import { Route} from 'react-router-dom'
+
 class App extends React.Component {
 
   componentDidMount() {
