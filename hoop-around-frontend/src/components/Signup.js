@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { updateLoginForm } from "../actions/loginForm.js"
+import { updateSignupForm } from "../actions/signupForm.js"
 import { signup } from "../actions/currentUser.js"
 
-const Signup = ({credentials, updateLoginForm, signup}) => {
+const Signup = ({credentials, updateSignupForm, signup}) => {
 
     const handleInputChange = event => {
         const { name, value } = event.target
@@ -11,7 +11,7 @@ const Signup = ({credentials, updateLoginForm, signup}) => {
           ...credentials,
           [name]: value
         }
-        updateLoginForm(updatedFormInfo)  
+        updateSignupForm(updatedFormInfo)  
       }
     
       const handleSubmit = event => {
@@ -35,8 +35,8 @@ const Signup = ({credentials, updateLoginForm, signup}) => {
 // I somehow need to integrate what type of account is this to set the type of user
   const mapStateToProps = state => {
     return {
-      credentials: state.loginForm
+      credentials: state.signupForm
     }
   }
   
-  export default connect(mapStateToProps, {updateLoginForm, signup} )(Signup)
+  export default connect(mapStateToProps, {updateSignupForm, signup} )(Signup)
