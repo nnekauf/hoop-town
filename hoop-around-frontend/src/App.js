@@ -18,6 +18,7 @@ class App extends React.Component {
        {this.props.loggedIn ? <Logout/> :
         <Login/>}
         <Signup/>
+        <Nav/>
       </div>
     );
     }

@@ -52,7 +52,7 @@ const Signup = ({credentials, updateSignupForm, signup}) => {
       </form>
     )
   }
-// I somehow need to integrate what type of account is this to set the type of user
+// I somehow need to integrate team association depending on the type of user they are
   const mapStateToProps = state => {
     return {
       credentials: state.signupForm
