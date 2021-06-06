@@ -3,6 +3,7 @@ import './App.css'
 import Login from "./components/Login"
 import Logout from "./components/Logout"
 import Signup from "./components/Signup"
+import Tournaments from "./components/Tournaments"
 import NavBar from "./components/NavBar"
 import {connect} from 'react-redux'
 import {getCurrentUser} from "./actions/currentUser"
@@ -22,7 +23,7 @@ class App extends React.Component {
        {this.props.loggedIn ? 
         <>
         {/* <Profile/> */}
-        {/* <Tournaments/> */}
+        <Tournaments/>
           <Logout/> 
         </>
           :
