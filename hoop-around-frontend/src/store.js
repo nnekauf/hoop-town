@@ -1,5 +1,5 @@
 import {createStore, combineReducers, compose, applyMiddleware} from 'redux'
-import listsReducer from './reducers/listsReducer'
+import tournamentsReducer from './reducers/tournamentsReducer'
 import usersReducer from './reducers/usersReducer'
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
@@ -12,7 +12,7 @@ import thunk from 'redux-thunk'
 // const initialState = {lists: []}
 
 const combinedReducer = combineReducers({
-  lists: listsReducer, 
+  tournaments: tournamentsReducer, 
   users: usersReducer,
   currentUser,
   loginForm,
