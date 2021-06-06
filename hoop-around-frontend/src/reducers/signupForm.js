@@ -1,3 +1,5 @@
+import { signup } from "../actions/currentUser"
+
 const initialState = {
     firstName: "",
     lastName: "",
@@ -10,7 +12,8 @@ const initialState = {
     role: ""
   }
   
-  export default (state = initialState, action) => {
+ 
+  const signupForm = (state = initialState, action) => {
     switch (action.type) {
       case "UPDATE_SIGNUP_FORM":
         return action.formData
@@ -19,4 +22,5 @@ const initialState = {
       default:
         return state
     }
-  }
+  } 
+  export default signupForm
