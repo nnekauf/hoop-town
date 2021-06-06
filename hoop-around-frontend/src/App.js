@@ -16,6 +16,7 @@ class App extends React.Component {
   }
 
   render(){
+    const {loggedIn, tournaments} = this.props
     return (
       <div>
         <h1 className="mainTitle"> Hoop Around</h1>
@@ -28,16 +29,16 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
-export default connect(null, {getCurrentUser})(App);
+  const mapStateToProps = state => {
+    return ({
+      loggedIn: !!state.currentUser,
+      tournaments: state.tournaments
+    })
+  }
+export default connect(mapStateToProps, {getCurrentUser})(App);
 
-// const mapStateToProps = state => {
-//   return ({
-//     loggedIn: !!state.currentUser,
-    
-//   })
-// }
+
 
 // export default connect(mapStateToProps, {getCurrentUser})(App);
 
