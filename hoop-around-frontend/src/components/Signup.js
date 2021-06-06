@@ -26,11 +26,7 @@ const Signup = ({credentials, updateSignupForm, signup}) => {
           signup(credentials)
       }
     
-      const handleButton2 = event => {
-        event.preventDefault()
-        debugger
-    }
-    return (
+    turn (
       <form onSubmit={handleSubmit}>
         <input placeholder="First Name"  value={credentials.firstName} name="firstName" type="text" onChange={handleInputChange} />
         <input placeholder="Last Name"  value={credentials.lastName} name="lastName" type="text" onChange={handleInputChange} />
@@ -38,9 +34,18 @@ const Signup = ({credentials, updateSignupForm, signup}) => {
         <input placeholder="Email"  value={credentials.email} name="email" type="email" onChange={handleInputChange} />
         <input placeholder="Password"  value={credentials.password} name="password" type="password" onChange={handleInputChange} />
         <input placeholder="Confirm Password"  value={credentials.passwordConfirmation} name="passwordConfirmation" type="password" onChange={handleInputChange} />
-
-        <button onClick ={handleButton1} type= "submit" name= "Coach" value="0"> Coach </button>
-        <button onClick ={handleButton2} type= "submit" name= "Player" value="1"> Player </button>
+        
+        <label> 
+            Coach
+            <input type="radio" value="role" onChange = {handleButton}>
+            </input>
+        </label>
+        <label> 
+            Player
+            <input type="radio" value="role" onChange = {handleButton}>
+            </input>
+        </label>
+        
         <input type="submit" value="Sign Up"/>
       </form>
     )
