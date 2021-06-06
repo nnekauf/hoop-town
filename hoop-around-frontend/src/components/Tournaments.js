@@ -18,7 +18,6 @@ const Tournaments = ({ getAllTournaments}) => {
     // add a filter form eventually
     return (
       <>
-    
         <div className = "tournamentCard" onClick ={renderEventPage}>
             Tournaments Page Here
         </div>

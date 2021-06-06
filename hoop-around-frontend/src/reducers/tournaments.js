@@ -1,7 +1,4 @@
-const initialState = {
-    tournaments: ""
-    
-  }
+const initialState = []
 
 export default (state = initialState, action) => {
     switch (action.type) {
