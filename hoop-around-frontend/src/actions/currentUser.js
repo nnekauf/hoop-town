@@ -43,7 +43,7 @@ export const getCurrentUser = (credentials) => {
     }
 }
 
-export const login = (credentials) => {
+export const login = (credentials, history) => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/login", {
             credentials: "include",
@@ -61,6 +61,7 @@ export const login = (credentials) => {
                 dispatch(setCurrentUser(r))
                 
                 dispatch(resetLoginForm())
+                history.push('/')
             }
         })
         .catch(console.log)
