@@ -3,7 +3,7 @@ const initialState = []
 export default (state = initialState, action) => {
     switch (action.type) {
       case "ALL":
-        return action.tournament
+        return action.tournaments
     //   case "SELECT_BY_CITY":
     //     return initialState
     //     case "SELECT_BY_DATE":

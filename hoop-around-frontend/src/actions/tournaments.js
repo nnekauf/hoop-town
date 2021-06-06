@@ -1,9 +1,9 @@
 //synchronout
 
-export const showAllTournaments = tournament => {
+export const showAllTournaments = tournaments => {
     return {
         type: "ALL",
-        tournament
+        tournaments
     }
 }
 

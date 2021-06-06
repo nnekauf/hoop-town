@@ -10,7 +10,11 @@ class ApplicationController < ActionController::API
     end
 
     def require_login
-        ((flash[:message] = "You must be logged in to do that") && (redirect_to '/login')) if !logged_in?
+        if !logged_in?
+            render json: {
+                error: "You must Be Logged in to do that!"
+                } 
+            end
     end
     
     
