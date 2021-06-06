@@ -21,8 +21,7 @@ class App extends React.Component {
     return (
       <div className="App">
       <NavBar />
-        <h1 className="mainTitle"> Hoop Around</h1>
-        <h2 className= "title" > Street Ball <b>Reinvented</b> </h2>
+        
        {/* { loggedIn ? <NavBar /> : <Home/> } */}
        <Home/> 
         <Switch>

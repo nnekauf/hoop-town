@@ -7,6 +7,9 @@ const Home = ({ state, loggedIn }) => {
     
     return (
         <div className = "homePage">
+            <h1 className="mainTitle"> Hoop Around</h1>
+            <h2 className= "title" > Street Ball <b>Reinvented</b> </h2>
+            
             { loggedIn ?
                 <>
                     <Link className = "homeButton" to="/tournaments"> Find Tournaments</Link> 
