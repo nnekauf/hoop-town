@@ -3,6 +3,7 @@ import './App.css'
 import {connect} from 'react-redux'
 import {getCurrentUser} from "./actions/currentUser"
 import NavBar from "./components/NavBar"
+import Home from './components/Home.js'
 import Login from "./components/Login"
 import Signup from "./components/Signup"
 import Tournaments from "./components/Tournaments"
@@ -19,12 +20,12 @@ class App extends React.Component {
     const {loggedIn, tournaments} = this.props
     return (
       <div className="App">
-      { loggedIn ? <NavBar location={this.props.location}/> : null }
+      { loggedIn ? <NavBar location={this.props.location}/> : <Home/> }
         <h1 className="mainTitle"> Hoop Around</h1>
         <h2 className= "title" > Street Ball <b>Reinvented</b> </h2>
        
         <Switch>
-           <Route exact path='/tournaments' component={Tournaments}/>
+           <Route exact path='/tournaments'component={Tournaments}/>
            <Route exact path='/login' component={Login}/>
            <Route exact path='/signup' component={Signup}/>
         </Switch>

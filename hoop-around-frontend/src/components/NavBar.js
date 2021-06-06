@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Logout from './Logout'
 import Login from './Login'
 import Signup from './Signup'
@@ -13,12 +13,12 @@ const NavBar = ({ state, loggedIn }) => {
       { loggedIn ?
        <>
         {state.currentUser.role} {state.currentUser.first_name}
-        <NavLink exact activeClassName="active" to="/tournaments"> Find Tournaments </NavLink>
-        <NavLink exact activeClassName="active" to="/mygames"> My Games </NavLink>
-        <NavLink exact activeClassName="active" to="/myprofile"> Profile </NavLink>
+        <Link className="active" to="/tournaments"> Find Tournaments </Link>
+        <Link className="active" to="/mygames"> My Games </Link>
+        <Link className="active" to="/myprofile"> Profile </Link>
           { state.currentUser.role === "coach" ? 
             <>
-              <NavLink exact activeClassName="active" to="/event/new"> Create Event </NavLink> 
+              <Link className="active" to="/event/new"> Create Event </Link> 
             </> 
             : 
               null
