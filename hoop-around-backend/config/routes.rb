@@ -9,10 +9,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :registrations
       resources :tournaments
+      # I want to see all tournaments and tournaments that belong to my team
       resources :teams
-      # resources :players
-      # resources :coaches
-      resources :users
+      #I dont want to see team profiles just yet
+      resources :users 
+      # I only want to see the current user, no one else
       resources :lists
       
        post '/logout', to: "sessions#destroy" 
