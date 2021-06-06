@@ -18,14 +18,17 @@ class App extends React.Component {
   render(){
     const {loggedIn, tournaments} = this.props
     return (
-      <div>
+      <div className="App">
+      { loggedIn ? <NavBar location={this.props.location}/> : null }
         <h1 className="mainTitle"> Hoop Around</h1>
         <h2 className= "title" > Street Ball <b>Reinvented</b> </h2>
-        {/* <NavBar/>  */}
-      
-         <Route exact path='/tournaments' component={Tournaments}/>
-          
        
+        <Switch>
+           <Route exact path='/tournaments' component={Tournaments}/>
+           <Route exact path='/login' component={Login}/>
+           <Route exact path='/signup' component={Signup}/>
+        </Switch>
+        
       </div>
     );
   }
@@ -36,29 +39,9 @@ class App extends React.Component {
       tournaments: state.tournaments
     })
   }
-export default connect(mapStateToProps, {getCurrentUser})(App);
+export default withRouter(connect(mapStateToProps, { getCurrentUser })(App));
 
 
 
 // export default connect(mapStateToProps, {getCurrentUser})(App);
 
-{/* <slideshow with video here/>
-          {this.props.loggedIn ? 
-            <>
-              <Profile/>
-              <Switch>
-                <Route exact path='/tournaments' component={Tournaments}/>
-              </Switch>
-              
-              <Tournaments/>
-              <Logout/> 
-            </>
-              :
-            <>
-              <Login/>
-              <Signup/>
-              <Tour/>
-            </>
-          }
-          
-          <NavBar/> */}
