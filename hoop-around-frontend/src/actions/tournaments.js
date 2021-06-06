@@ -1,9 +1,9 @@
 //synchronout
 
-export const getAllTournaments = user => {
+export const getAllTournaments = tournament => {
     return {
         type: "ALL",
-        user
+        tournament
     }
 }
 
@@ -11,7 +11,7 @@ export const getAllTournaments = user => {
 // asych
 
 
-export const getAllTournaments = () => {
+export const allTournaments = () => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/tournaments", {
             credentials: "include",

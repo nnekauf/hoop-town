@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 // import { updateLoginForm } from "../actions/loginForm.js"
 import { getAllTournaments} from "../actions/tournaments"
+import { allTournaments} from "../actions/tournaments"
 
 const Tournaments = ({getAllTournaments}) => {
 
@@ -29,4 +30,4 @@ const Tournaments = ({getAllTournaments}) => {
     }
   }
   
-  export default connect(mapStateToProps, {updateLoginForm, getAllTournaments} )(Tournaments)
+  export default connect(mapStateToProps, { getAllTournaments, allTournaments} )(Tournaments)

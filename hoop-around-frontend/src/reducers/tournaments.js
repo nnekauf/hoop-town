@@ -1,11 +1,16 @@
-export default (state = null, action) => {
+const initialState = {
+    tournaments: ""
+    
+  }
+
+export default (state = initialState, action) => {
     switch (action.type) {
       case "ALL":
-        return action.user
-      case "SELECT_BY_CITY":
-        return null
-        case "SELECT_BY_DATE":
-            return null
+        return action.tournament
+    //   case "SELECT_BY_CITY":
+    //     return initialState
+    //     case "SELECT_BY_DATE":
+    //         return null
       default:
         return state
     }
