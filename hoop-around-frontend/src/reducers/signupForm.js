@@ -1,4 +1,3 @@
-import { signup } from "../actions/currentUser"
 
 const initialState = {
     firstName: "",
