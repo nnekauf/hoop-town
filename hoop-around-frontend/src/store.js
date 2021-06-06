@@ -12,7 +12,7 @@ import thunk from 'redux-thunk'
 // const initialState = {lists: []}
 
 const combinedReducer = combineReducers({
-  tournaments: tournaments, 
+  tournaments, 
   users: usersReducer,
   currentUser,
   loginForm,
