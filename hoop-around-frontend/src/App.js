@@ -20,10 +20,10 @@ class App extends React.Component {
     const {loggedIn, tournaments} = this.props
     return (
       <div className="App">
-      { loggedIn ? <NavBar location={this.props.location}/> : <Home/> }
+      
         <h1 className="mainTitle"> Hoop Around</h1>
         <h2 className= "title" > Street Ball <b>Reinvented</b> </h2>
-       
+       { loggedIn ? <NavBar /> : <Home/> }
         <Switch>
            <Route exact path='/tournaments'component={Tournaments}/>
            <Route exact path='/login' component={Login}/>
