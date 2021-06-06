@@ -3,6 +3,7 @@ import listsReducer from './reducers/listsReducer'
 import usersReducer from './reducers/usersReducer'
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
+import signupForm from './reducers/signupForm'
 
 import {composeWithDevTools} from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
@@ -14,7 +15,8 @@ const combinedReducer = combineReducers({
   lists: listsReducer, 
   users: usersReducer,
   currentUser,
-  loginForm
+  loginForm,
+  signupForm
 })
 
 const store = createStore(combinedReducer, compose(applyMiddleware(thunk), composeWithDevTools()))
