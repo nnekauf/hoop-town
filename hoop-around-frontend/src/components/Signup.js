@@ -19,14 +19,14 @@ const Signup = ({credentials, updateSignupForm, signup}) => {
         signup(credentials)
       }
     
-      const handleButton1 = event => {
-          event.preventDefault()
-        //   debugger
-          credentials.role = event.target.value
-          signup(credentials)
-      }
+    //   const handleButton = event => {
+    //       event.preventDefault()
+    //     //   debugger
+    //       credentials.role = event.target.value
+    //       updateSignupForm(updatedFormInfo)
+    //   }
     
-    turn (
+    return (
       <form onSubmit={handleSubmit}>
         <input placeholder="First Name"  value={credentials.firstName} name="firstName" type="text" onChange={handleInputChange} />
         <input placeholder="Last Name"  value={credentials.lastName} name="lastName" type="text" onChange={handleInputChange} />
@@ -37,12 +37,12 @@ const Signup = ({credentials, updateSignupForm, signup}) => {
         
         <label> 
             Coach
-            <input type="radio" value="role" onChange = {handleButton}>
+            <input type="radio" name = "role" value="0" onChange ={handleInputChange}>
             </input>
         </label>
         <label> 
             Player
-            <input type="radio" value="role" onChange = {handleButton}>
+            <input type="radio" name = "role" value="1" onChange ={handleInputChange}>
             </input>
         </label>
         
