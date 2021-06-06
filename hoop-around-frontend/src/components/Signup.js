@@ -32,7 +32,9 @@ const Signup = ({credentials, updateSignupForm, signup}) => {
         <input placeholder="Last Name"  value={credentials.lastName} name="lastName" type="text" onChange={handleInputChange} />
         <input placeholder="Username"  value={credentials.username} name="username" type="text" onChange={handleInputChange} />
         <input placeholder="Email"  value={credentials.email} name="email" type="email" onChange={handleInputChange} />
+        <input placeholder="Contact Number"  value={credentials.number} name="number" type="tel" onChange={handleInputChange} />
         <input placeholder="Password"  value={credentials.password} name="password" type="password" onChange={handleInputChange} />
+        <textarea placeholder="Tell Us About Yourself"  value={credentials.bio} name="bio" type="text" onChange={handleInputChange} />
         <input placeholder="Confirm Password"  value={credentials.passwordConfirmation} name="passwordConfirmation" type="password" onChange={handleInputChange} />
         
         <label> 
