@@ -1,4 +1,5 @@
 class Api::V1::TournamentsController < ApplicationController
+    #set before action that user must be a coach except to view
     def index
         tournaments = Tournament.all
         render json: tournaments 
