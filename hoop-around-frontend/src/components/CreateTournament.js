@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+// import { updateTournamentForm } from '../actions/tournamentForm'
 
 const CreateTournament = props => {
 
@@ -9,7 +9,7 @@ const CreateTournament = props => {
     const handleChange = event => {
         console.log("trigger Handle change")
         const { name, value } = event.target
-        updateTournamentForm(name, value)
+        // updateTournamentForm(name, value)
     }
 
     return (
