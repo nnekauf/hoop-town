@@ -12,17 +12,17 @@ const Home = ({ state, loggedIn }) => {
             
             { loggedIn ?
                 <>
-                    <Link className = "homeButton" to="/tournaments"> Find Tournaments</Link> 
+                    <Link className = "homeButton" exact to="/tournaments"> Find Tournaments</Link> 
                         <br/>
-                    <Link className = "homeButton" to="/mygames"> My Games</Link>
+                    <Link className = "homeButton" exact to="/mygames"> My Games</Link>
                     <br/>
-                    <Link className = "homeButton" to="/myprofile"> Profile</Link>
+                    <Link className = "homeButton" exact to="/myprofile"> Profile</Link>
                 </> 
                 :
                 <>
-                    <Link className = "homeButton" to="/signup">Sign Up</Link> 
+                    <Link className = "homeButton" exact to="/signup">Sign Up</Link> 
                     <br/>
-                    <Link className = "homeButton" to="/login">Log In</Link>
+                    <Link className = "homeButton" exact to="/login">Log In</Link>
                 </>
             }
 
