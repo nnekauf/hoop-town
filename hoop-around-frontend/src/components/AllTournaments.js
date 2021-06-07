@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-const Tournaments = props => {
+const AllTournaments = props => {
 
     const tournamentCard = props.tournaments.length >0 ?
     props.tournaments.map(t => (<p key={t.id}><Link to={`/tournaments/${t.id}`}>{t.name}</Link></p>)) :
@@ -18,4 +18,4 @@ const Tournaments = props => {
     }
   }
   
-  export default connect(mapStateToProps)(Tournaments)
+  export default connect(mapStateToProps)(AllTournaments)
