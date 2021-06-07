@@ -32,6 +32,8 @@ const NavBar = ({ state, loggedIn }) => {
           <Link className = "navLink" to="/login">Log In</Link>
         </>
       }
+      <br/>
+      <Link className = "navLink" to="/">Home</Link>
     </div>
   )
   }
