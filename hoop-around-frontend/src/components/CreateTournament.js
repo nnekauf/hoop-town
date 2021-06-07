@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import { updateTournamentForm } from '../actions/tournamentForm'
+import { updateTournamentForm } from '../actions/tournamentForm'
 import { createTournament } from '../actions/tournaments'
 const CreateTournament = ({formData, updateTournamentForm, createTournament, history}) => {
 
@@ -9,7 +9,7 @@ const CreateTournament = ({formData, updateTournamentForm, createTournament, his
     const handleChange = event => {
         console.log("trigger Handle change")
         const { name, value } = event.target
-        // updateTournamentForm(name, value)
+        updateTournamentForm(name, value)
     }
     const handleSubmit = event => {
         event.preventDefault()
@@ -88,7 +88,7 @@ const CreateTournament = ({formData, updateTournamentForm, createTournament, his
     }
   }
   
-  export default connect(mapStateToProps)(CreateTournament)
+  export default connect(mapStateToProps, {updateTournamentForm, createTournament})(CreateTournament)
 //   t.string "name"
 //   t.string "venue"
 //   t.datetime "date_time"
