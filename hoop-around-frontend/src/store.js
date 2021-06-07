@@ -1,6 +1,6 @@
 import {createStore, combineReducers, compose, applyMiddleware} from 'redux'
 import tournaments from './reducers/tournaments'
-import usersReducer from './reducers/usersReducer'
+// import usersReducer from './reducers/usersReducer'
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
 import signupForm from './reducers/signupForm'
@@ -13,7 +13,7 @@ import thunk from 'redux-thunk'
 
 const combinedReducer = combineReducers({
   tournaments, 
-  users: usersReducer,
+  // users: usersReducer,
   currentUser,
   loginForm,
   signupForm,
