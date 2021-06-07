@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 // import { updateTournamentForm } from '../actions/tournamentForm'
-
+import { createTournament } from '../actions/tournaments'
 const CreateTournament = props => {
 
     const { name, venue, date, host, about, street, city, state, zipcode} = formData
@@ -11,6 +11,10 @@ const CreateTournament = props => {
         const { name, value } = event.target
         // updateTournamentForm(name, value)
     }
+    const handleSubmit = event => {
+        event.preventDefault()
+        createTournament(formData, history)
+      }
 
     return (
         <form onSubmit={event => {
