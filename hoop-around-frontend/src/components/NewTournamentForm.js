@@ -39,7 +39,7 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
 
   const mapStateToProps = state => {
     return {
-      formData: state.tournaments
+      formData: state.tournamentForm
     }
   }
   
