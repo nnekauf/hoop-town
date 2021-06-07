@@ -79,7 +79,7 @@ export const logout = () => {
     }
 }
 
-export const signup = (credentials) => {
+export const signup = (credentials, history) => {
     const body = {
         user: {
             first_name: credentials.firstName,
@@ -110,6 +110,7 @@ export const signup = (credentials) => {
             } else {
                 dispatch(setCurrentUser(r))
                 dispatch(resetSignupForm())
+                history.push('/')
             }
         })
         .catch(console.log)
