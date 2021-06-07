@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 // import { updateTournamentForm } from '../actions/tournamentForm'
 import { createTournament } from '../actions/tournaments'
-const CreateTournament = props => {
+const CreateTournament = ({formData, updateTournamentForm, createTournament, history}) => {
 
     const { name, venue, date, host, about, street, city, state, zipcode} = formData
 
