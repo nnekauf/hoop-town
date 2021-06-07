@@ -4,7 +4,7 @@ import { updateTournamentForm } from '../actions/tournamentForm'
 import { createTournament } from '../actions/tournaments'
 
 
-const CreateTournament = ({formData, updateTournamentForm, createTournament, history}) => {    
+const NewTournamentForm = ({formData, updateTournamentForm, createTournament, history}) => {    
 
     const handleChange = event => {
         console.log("trigger Handle change")
@@ -43,4 +43,4 @@ const CreateTournament = ({formData, updateTournamentForm, createTournament, his
     }
   }
   
-  export default connect(mapStateToProps, {updateTournamentForm, createTournament})(CreateTournament)
+  export default connect(mapStateToProps, {updateTournamentForm, createTournament})(NewTournamentForm)

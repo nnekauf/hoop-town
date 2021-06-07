@@ -7,7 +7,7 @@ import Home from './components/Home.js'
 import Login from "./components/Login"
 import Signup from "./components/Signup"
 import AllTournaments from "./components/AllTournaments"
-import CreateTournament from "./components/CreateTournament"
+import NewTournamentForm from "./components/NewTournamentForm"
 import { Route, Switch, withRouter } from 'react-router-dom'
 // import { Route} from 'react-router-dom'
 
@@ -28,7 +28,7 @@ class App extends React.Component {
            <Route exact path='/login' component={Login}/>
            <Route exact path='/signup' component={Signup}/>
            <Route exact path='/tournaments'component={AllTournaments}/>
-           <Route exact path='/tournaments/new'component={CreateTournament}/>
+           <Route exact path='/tournaments/new'component={NewTournamentForm}/>
            {/* <Route exact path='/tournaments/map'component={TournamentsMap}/>
            <Route exact path='/my-tournaments'component={MyTournaments}/>
            <Route exact path='/tournaments/:id'component={TournamentCard}/>
