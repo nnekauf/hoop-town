@@ -21,13 +21,21 @@ class App extends React.Component {
     return (
       <div className="App">
       <NavBar />
-        
-       {/* { loggedIn ? <NavBar /> : <Home/> } */}
-       <Home/> 
+      
         <Switch>
-           <Route exact path='/tournaments'component={Tournaments}/>
+          <Route exact path='/'component={Home}/>
            <Route exact path='/login' component={Login}/>
            <Route exact path='/signup' component={Signup}/>
+           <Route exact path='/tournaments'component={Tournaments}/>
+           {/* <Route exact path='/tournaments/map'component={TournamentsMap}/>
+           <Route exact path='/my-tournaments'component={MyTournaments}/>
+           <Route exact path='/tournaments/:id'component={TournamentCard}/>
+           <Route exact path='/tournaments/new'component={CreateTournament}/>
+           <Route exact path='/tournaments/:id/register'component={TournamentRegistration}/>
+           <Route exact path='/my-profile'component={Profile}/>
+           <Route exact path='/about/who-we-are'component={About1}/>
+           <Route exact path='/about/what-we-do'component={About2}/>
+           <Route exact path='/about/join'component={About3}/>  */}
         </Switch>
         
       </div>
