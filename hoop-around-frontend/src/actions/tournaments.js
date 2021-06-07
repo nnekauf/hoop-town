@@ -1,5 +1,5 @@
+import {resetTournamentForm} from './tournamentForm.js'
 //synchronout
-
 export const showAllTournaments = tournaments => {
     return {
         type: "ALL",
@@ -63,8 +63,8 @@ export const createTournament = (formData, history) => {
             if (r.error) {
                 alert(r.error)
             } else {
-                dispatch(showAllTournaments(r))
-                dispatch(resetTournamenrForm())
+                
+                dispatch(resetTournamentForm())
                 history.push('/')
             }
         })
