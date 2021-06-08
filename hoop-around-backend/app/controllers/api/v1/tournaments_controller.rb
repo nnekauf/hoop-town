@@ -5,7 +5,7 @@ class Api::V1::TournamentsController < ApplicationController
         tournaments = Tournament.all
         render json: tournaments 
     end
-
+    
     def show
        
         tournament = Tournament.find_by(id: params[:id])

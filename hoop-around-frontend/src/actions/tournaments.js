@@ -26,6 +26,7 @@ export const getAllTournaments = () => {
             if (r.error) {
                 alert(r.error)
             } else {
+                // console.log(r.map => (r.date_time))
                 dispatch(showAllTournaments(r))
     
             }
