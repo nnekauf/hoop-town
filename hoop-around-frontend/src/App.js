@@ -9,6 +9,7 @@ import Signup from "./components/Signup"
 import AllTournaments from "./components/AllTournaments"
 import NewTournamentForm from "./components/NewTournamentForm"
 import { Route, Switch, withRouter } from 'react-router-dom'
+import TournamentShowPage from './components/TournamentShowPage'
 // import { Route} from 'react-router-dom'
 
 class App extends React.Component {
@@ -29,9 +30,16 @@ class App extends React.Component {
            <Route exact path='/signup' component={Signup}/>
            <Route exact path='/tournaments'component={AllTournaments}/>
            <Route exact path='/tournaments/new'component={NewTournamentForm}/>
+           <Route exact path='/tournaments/:id'render={props => {
+              
+              const t = tournaments.find(t => t.id === props.match.params.id)
+              console.log(t)
+              return <TournamentShowPage tournament={t} {...props}/> } 
+              }/>
+           
            {/* <Route exact path='/tournaments/map'component={TournamentsMap}/>
            <Route exact path='/my-tournaments'component={MyTournaments}/>
-           <Route exact path='/tournaments/:id'component={TournamentCard}/>
+           
            
            <Route exact path='/tournaments/:id/register'component={TournamentRegistration}/>
            <Route exact path='/my-profile'component={Profile}/>
