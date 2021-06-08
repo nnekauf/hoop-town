@@ -3,7 +3,7 @@
     text-transform: uppercase; 
     font-family: Arial;
    }
-   
+
 .header{
     border-bottom: 1px solid #E2E8F0;
 }
@@ -29,3 +29,8 @@
     background-color: #101010;
 }
 
+.tournamentCard {
+    border-bottom: 1px solid #E2E8F0;
+}
+
+#wrapper { display: flex; }
