@@ -1,10 +1,11 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
+import TournamentShowPage from './TournamentShowPage'
 
 const TournamentCard = ({tournament}) => {
 
-    
+ 
 
   return (
       <div className = "tournamentCard">
@@ -18,7 +19,8 @@ const TournamentCard = ({tournament}) => {
         <div id="wrapper">
           <h4> # of teams | {tournament.teams.length}</h4> 
         </div>
-         
+        <Link className = "homeButton" exact to={`/tournaments/${tournament.id}`}>See More</Link>
+       
       </div>
   )  
 
