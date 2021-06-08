@@ -19,21 +19,22 @@ class App extends React.Component {
   }
 
   render(){
-    const {loggedIn, tournaments} = this.props
+    // const {tournaments} = this.props
     return (
       <div className="App">
       <NavBar />
-      {/* {console.log(params)} */}
+      {/* {console.log("hello")}
+      {console.log(state.tournaments)} */}
         <Switch>
           <Route exact path='/'component={Home}/>
            <Route exact path='/login' component={Login}/>
            <Route exact path='/signup' component={Signup}/>
            <Route exact path='/tournaments'component={AllTournaments}/>
            <Route exact path='/tournaments/new'component={NewTournamentForm}/>
-           <Route exact path='/tournaments/:id' render ={match => {
-           const tournament = tournaments.find(t => t.id === match.params)
-           console.log(tournament)
-           return <TournamentShowPage tournament = {tournament}/>}}  />
+           {/* <Route exact path='/tournaments/:id' render ={tournaments => {
+           const tournament = tournaments.map(t => t.id === tournaments.match.params.id)
+           console.log(tournaments)
+           }}  /> */}
 
            {/* <Route exact path='/tournaments/:id'render={state => {
               
