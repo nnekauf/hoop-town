@@ -47,3 +47,22 @@
 
 #wrapper { display: flex; }
 
+.homePage {
+    border-radius: 12px;
+  height: 214px;
+  width: 1000px;
+  padding: 8px;
+  padding-left: 15px;
+    justify-content: center;
+    margin: 5px auto;
+    background-color: #c7c7c7;
+    text-align: center;
+
+}
+.homeButton {
+    border-radius: 10px;
+    background-color: #ffffff;
+    height: 20px;
+  width: 500px;
+  padding: 4px;
+}

@@ -31,7 +31,7 @@ class App extends React.Component {
            <Route exact path='/signup' component={Signup}/>
            <Route exact path='/tournaments'component={AllTournaments}/>
            <Route exact path='/tournaments/new'component={NewTournamentForm}/>
-           <Route exact path='/tournaments/:id'component={TournamentShowPage}/>>
+           <Route exact path='/tournaments/:id'component={TournamentShowPage}/>
            {/* <Route exact path='/tournaments/:id' render ={tournaments => {
            const tournament = tournaments.map(t => t.id === tournaments.match.params.id)
            console.log(tournaments)

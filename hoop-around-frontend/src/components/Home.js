@@ -21,7 +21,7 @@ const Home = ({ state, loggedIn }) => {
                 :
                 <>
                     <Link className = "homeButton" exact to="/signup">Sign Up</Link> 
-                    <br/>
+                    <br/> <br/>
                     <Link className = "homeButton" exact to="/login">Log In</Link>
                 </>
             }
