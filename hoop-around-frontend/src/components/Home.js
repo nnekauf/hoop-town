@@ -13,9 +13,9 @@ const Home = ({ state, loggedIn }) => {
             { loggedIn ?
                 <>
                     <Link className = "homeButton" exact to="/tournaments"> Find Tournaments</Link> 
-                        <br/>
+                        <br/><br/>
                     <Link className = "homeButton" exact to="/mygames"> My Games</Link>
-                    <br/>
+                    <br/><br/>
                     <Link className = "homeButton" exact to="/myprofile"> Profile</Link>
                 </> 
                 :

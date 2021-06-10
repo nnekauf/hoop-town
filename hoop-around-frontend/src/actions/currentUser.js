@@ -2,6 +2,7 @@
 import { resetLoginForm } from "./loginForm.js"
 import { resetSignupForm } from "./signupForm.js"
 import { getAllTournaments } from "./tournaments.js"
+
 //synchronout
 export const setCurrentUser = user => {
     return {
@@ -37,6 +38,7 @@ export const getCurrentUser = (credentials) => {
             } else {
                 dispatch(setCurrentUser(r))
                 dispatch(getAllTournaments())
+                
             }
         })
         .catch(console.log)
@@ -71,11 +73,14 @@ export const login = (credentials, history) => {
 export const logout = () => {
     return dispatch => {
          dispatch(clearCurrentUser())
+         
         return fetch("http://localhost:3000/api/v1/logout", {
             credentials: "include",
             method: "DELETE",
             
         })
+        
+    //   history.push('/')
     }
 }
 
