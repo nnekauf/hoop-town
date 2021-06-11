@@ -18,8 +18,13 @@ class App extends React.Component {
     this.props.getCurrentUser()
   }
 
+  renderTournament = (props) => {
+    let id = parseInt(props.match.params.id)
+    let t = this.props.tournaments.find(t => t.id === id)
+    return(t ? <TournamentShowPage tournament={t}/> : <> Not found </>)
+  }
   render(){
-    // const {tournaments} = this.props
+    // const tournaments = this.props
     return (
       <div className="App">
       <NavBar />
@@ -31,19 +36,8 @@ class App extends React.Component {
            <Route exact path='/signup' component={Signup}/>
            <Route exact path='/tournaments'component={AllTournaments}/>
            <Route exact path='/tournaments/new'component={NewTournamentForm}/>
-           <Route exact path='/tournaments/:id'component={TournamentShowPage}/>
-           {/* <Route exact path='/tournaments/:id' render ={tournaments => {
-           const tournament = tournaments.map(t => t.id === tournaments.match.params.id)
-           console.log(tournaments)
-           }}  /> */}
-
-           {/* <Route exact path='/tournaments/:id'render={state => {
-              
-              const t = state.tournaments.find(t => t.id === params.id)
-              console.log(t)
-              return <TournamentShowPage tournament={t} {...state}/> } 
-              }/> */}
-           
+          <Route exact path='/tournaments/:id'render={ this.renderTournament} />
+          
            {/* <Route exact path='/tournaments/map'component={TournamentsMap}/>
            <Route exact path='/my-tournaments'component={MyTournaments}/>
            
