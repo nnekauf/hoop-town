@@ -85,20 +85,22 @@ export const logout = () => {
 }
 
 export const signup = (credentials, history) => {
+    
     const body = {
         user: {
             first_name: credentials.firstName,
             last_name: credentials.astName,
             email: credentials.email,
             username: credentials.username,
-            contact_number: credentials.number,
+            contact_number: parseInt(credentials.number),
             password_digest: credentials.password,
             password_confirmation: credentials.passwordConfirmation,
             bio: credentials.bio,
-            role: credentials.role
+            role: parseInt(credentials.role)
 
         }
     }
+    
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/signup", {
             credentials: "include",

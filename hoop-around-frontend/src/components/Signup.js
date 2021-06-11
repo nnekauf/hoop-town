@@ -39,12 +39,12 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
         
         <label> 
             Coach
-            <input type="radio" name = "role" value="0" onChange ={handleInputChange}>
+            <input type="radio" name = "role" value={0} onChange ={handleInputChange}>
             </input>
         </label>
         <label> 
             Player
-            <input type="radio" name = "role" value="1" onChange ={handleInputChange}>
+            <input type="radio" name = "role" value={1} onChange ={handleInputChange}>
             </input>
         </label>
         
