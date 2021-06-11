@@ -6,6 +6,7 @@ import { signup } from "../actions/currentUser.js"
 const Signup = ({credentials, updateSignupForm, signup, history}) => {
 
     const handleInputChange = event => {
+      event.preventDefault()
         const { name, value } = event.target
         const updatedFormInfo = {
           ...credentials,

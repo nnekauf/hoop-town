@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     enum role: [:coach, :player]
 
-    belongs_to :team
+    belongs_to :team, optional: true
   
     has_secure_password 
 
