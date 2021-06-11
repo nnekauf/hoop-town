@@ -26,6 +26,6 @@ class Api::V1::RegistrationsController < ApplicationController
 
     def registration_params
 
-        params.require(:registration). permit(:name)
+        params.require(:registration). permit(:team_id, :tournament_id)
     end
 end

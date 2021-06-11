@@ -29,6 +29,6 @@ class Api::V1::TournamentsController < ApplicationController
 
     def tournament_params
 
-        params.require(:tournament). permit(:name)
+        params.require(:tournament). permit(:name, :venue, :date_time, :host, :about, :street, :city, :state, :zipcode)
     end
 end
