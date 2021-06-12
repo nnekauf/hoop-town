@@ -20,7 +20,7 @@ class Api::V1::UsersController < ApplicationController
 
     def create #signup
         # user = User.create(User_params)
-       binding.pry
+    #    binding.pry
         user = User.new(user_params)
         if user.save
             render json: user
