@@ -3,9 +3,9 @@ class TournamentSerializer < ActiveModel::Serializer
   has_many :teams
 
   def organizer
-    
-    # user = User.coach.find_by(id: organizer_id)
-    # user
+   
+    user = User.coach.find_by(id: object.organizer_id)
+    user
     
   end
   

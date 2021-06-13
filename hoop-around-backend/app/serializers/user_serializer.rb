@@ -4,9 +4,15 @@ class UserSerializer < ActiveModel::Serializer
   belongs_to :team
   
  def my_tournaments
-   if current_user &&current_user.team
-    current_user.team.tournaments.each {|t|
+  #  if current_user &&current_user.team
+  #   current_user.team.tournaments.each {|t|
+  # t}
+  #  end
+  
+  if object.team
+    object.team.tournaments.each {|t|
   t}
    end
+   
   end
 end
