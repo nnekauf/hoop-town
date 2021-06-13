@@ -58,7 +58,7 @@ export const createTournament = (formData, history) => {
             headers: {
                 "Content-Type": "application/json"
               },
-              body: JSON.stringify()
+              body: JSON.stringify(body)
         })
         .then (response => response.json())
         .then (r => {
@@ -68,6 +68,7 @@ export const createTournament = (formData, history) => {
                 
                 dispatch(resetTournamentForm())
                 history.push('/')
+                // mostlikely want to redirect to this tournament show page
             }
         })
         .catch(console.log)
