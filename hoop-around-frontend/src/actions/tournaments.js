@@ -7,6 +7,12 @@ export const showAllTournaments = tournaments => {
     }
 }
 
+export const addTournament = tournament => {
+    return {
+      type: "ADD_TOURNAMENT",
+      tournament
+    }
+  }
 
 // asych
 
@@ -65,7 +71,7 @@ export const createTournament = (formData, history) => {
             if (r.error) {
                 alert(r.error)
             } else {
-                
+                dispatch(addTournament(r))
                 dispatch(resetTournamentForm())
                 history.push('/')
                 // mostlikely want to redirect to this tournament show page
