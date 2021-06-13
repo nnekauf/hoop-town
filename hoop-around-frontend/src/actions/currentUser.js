@@ -60,6 +60,7 @@ export const login = (credentials, history) => {
             if (r.error) {
                 alert(r.error)
             } else {
+               
                 dispatch(setCurrentUser(r))
                 
                 dispatch(resetLoginForm())
@@ -115,7 +116,9 @@ export const signup = (credentials, history) => {
             if (r.error) {
                 alert(r.error)
             } else {
+        
                 dispatch(setCurrentUser(r))
+                // dispatch(login(r,history))
                 dispatch(resetSignupForm())
                 history.push('/')
             }
