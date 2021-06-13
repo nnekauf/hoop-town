@@ -46,7 +46,8 @@ export const createTournament = (formData, history) => {
             street: formData.street,
             city: formData.city,
             state: formData.state,
-            zipcode: formData.zipcode
+            zipcode: formData.zipcode,
+            // organizer_id: 
 
         }
     }

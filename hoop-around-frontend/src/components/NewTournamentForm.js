@@ -4,7 +4,7 @@ import { updateTournamentForm } from '../actions/tournamentForm'
 import { createTournament } from '../actions/tournaments'
 
 
-const NewTournamentForm = ({formData, updateTournamentForm, createTournament, history}) => {    
+const NewTournamentForm = ({formData, updateTournamentForm, createTournament, history, state}) => {    
 
     const handleChange = event => {
         console.log("trigger Handle change")
@@ -20,8 +20,9 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
         event.preventDefault()
         createTournament(formData, history)
       }
-
+    formData.organizerId = state.currentUser.id
     return (
+      
         <form onSubmit={handleSubmit}>
           <input placeholder="name" name="name" onChange={handleChange} value={formData.name} />
           <input placeholder="venue" name="venue" onChange={handleChange}   value={formData.venue}/>
@@ -32,6 +33,7 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
           <input placeholder="city" name="city"     onChange={handleChange}    value={formData.city} />
           <input placeholder="state" name="state"    onChange={handleChange}   value={formData.state} />
           <input placeholder="zipcode" name="zipcode"  onChange={handleChange} value={formData.zipcode} />
+          {`Organizer: ${state.currentUser.username} (you)`} <input hidden value={formData.organizerId} />
           <input type="submit" value="Create Tournament"/> 
         </form>
     )
@@ -39,7 +41,9 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
 
   const mapStateToProps = state => {
     return {
-      formData: state.tournamentForm
+      state,
+      formData: state.tournamentForm,
+      
     }
   }
   
