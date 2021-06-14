@@ -44,7 +44,7 @@ export const getAllTournaments = () => {
 export const createTournament = (formData, history) => {
     
     const body = {
-        user: {
+        tournament: {
             name: formData.name,
             venue: formData.venue,
             date_time: formData.date_time,
