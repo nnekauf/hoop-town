@@ -15,7 +15,16 @@ class Api::V1::TournamentsController < ApplicationController
     def create
        
         tournament = Tournament.create(tournament_params)
-        render json: tournament
+        tournament.organizer_id = session[:user_id]
+        # binding.pry
+        if tournament.save
+            
+            binding.pry
+            render json: tournament
+        else 
+           binding.pry
+            render json: {message: tournament.errors.full_messages}
+        end
     end
 
     def destroy
@@ -29,6 +38,6 @@ class Api::V1::TournamentsController < ApplicationController
 
     def tournament_params
 
-        params.require(:tournament). permit(:name, :venue, :date_time, :host, :about, :street, :city, :state, :zipcode)
+        params.require(:tournament). permit(:name, :venue, :date_time, :host, :about, :street, :city, :state, :zipcode, :organizer_id)
     end
 end

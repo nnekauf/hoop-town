@@ -2,13 +2,14 @@
 const initialState = {
     name: "",
     venue: "",
-    dateTime: "",
+    date: "",
     host: "",
     about: "",
     street: "",
     city: "",
     state: "",
     zipcode: ""
+   
   }
   
  

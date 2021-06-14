@@ -21,12 +21,25 @@ class App extends React.Component {
   renderTournament = (props) => {
     let id = parseInt(props.match.params.id)
     let t = this.props.tournaments.find(t => t.id === id)
+    console.log(t)
     return(t ? <TournamentShowPage tournament={t}/> : <> Not found </>)
   }
+
+  // renderForm = (props) => {
+  //   parseInt(props.match.params)
+  //   let user = this.props.currentUser
+  // //  let userCopy = arr.find(t => t.id)
+  // // let user = arr.map(object=> object)
+  // // let userCopy = user[0]
+  // // console.log(this.props.currentUser)
+  //   return(<NewTournamentForm user ={user}/>)
+  // }
+
   render(){
     // const tournaments = this.props
     return (
       <div className="App">
+        {/* {console.log("outsie",this.props)} */}
       <NavBar />
       {/* {console.log("hello")}
       {console.log(state.tournaments)} */}
@@ -36,7 +49,8 @@ class App extends React.Component {
            <Route exact path='/signup' component={Signup}/>
            <Route exact path='/tournaments'component={AllTournaments}/>
            <Route exact path='/tournaments/new'component={NewTournamentForm}/>
-          <Route exact path='/tournaments/:id'render={ this.renderTournament} />
+           {/* <Route exact path='/tournaments/new'render={this.renderForm}/> */}
+          <Route exact path='/tournaments/:id'render={ this.renderTournament}/>
           
            {/* <Route exact path='/tournaments/map'component={TournamentsMap}/>
            <Route exact path='/my-tournaments'component={MyTournaments}/>
@@ -56,7 +70,8 @@ class App extends React.Component {
   const mapStateToProps = state => {
     return ({
       loggedIn: !!state.currentUser,
-      tournaments: state.tournaments
+      tournaments: state.tournaments,
+      currentUser: state.currentUser
     })
   }
 export default withRouter(connect(mapStateToProps, { getCurrentUser })(App));

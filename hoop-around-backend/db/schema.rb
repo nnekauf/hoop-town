@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_03_081457) do
+ActiveRecord::Schema.define(version: 2021_06_13_060803) do
 
   create_table "registrations", force: :cascade do |t|
     t.integer "team_id", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_06_03_081457) do
     t.string "city"
     t.string "state"
     t.integer "zipcode"
+    t.integer "organizer_id"
   end
 
   create_table "users", force: :cascade do |t|

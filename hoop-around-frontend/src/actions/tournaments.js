@@ -7,6 +7,12 @@ export const showAllTournaments = tournaments => {
     }
 }
 
+export const addTournament = tournament => {
+    return {
+      type: "ADD_TOURNAMENT",
+      tournament
+    }
+  }
 
 // asych
 
@@ -36,37 +42,38 @@ export const getAllTournaments = () => {
 }
 
 export const createTournament = (formData, history) => {
+    
     const body = {
-        user: {
+        tournament: {
             name: formData.name,
             venue: formData.venue,
-            date: formData.date_time,
+            date_time: formData.date,
             host: formData.host,
             about: formData.about,
             street: formData.street,
             city: formData.city,
             state: formData.state,
             zipcode: formData.zipcode
-
         }
     }
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/tournaments", {
-            formData: "include",
+            credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
               },
-              body: JSON.stringify()
+            body: JSON.stringify(body)
         })
         .then (response => response.json())
         .then (r => {
             if (r.error) {
                 alert(r.error)
             } else {
-                
+                dispatch(addTournament(r))
                 dispatch(resetTournamentForm())
                 history.push('/')
+                // mostlikely want to redirect to this tournament show page
             }
         })
         .catch(console.log)
