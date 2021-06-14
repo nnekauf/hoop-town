@@ -47,7 +47,7 @@ export const createTournament = (formData, history) => {
         tournament: {
             name: formData.name,
             venue: formData.venue,
-            date_time: formData.date_time,
+            date_time: formData.date,
             host: formData.host,
             about: formData.about,
             street: formData.street,
@@ -58,12 +58,12 @@ export const createTournament = (formData, history) => {
     }
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/tournaments", {
-            formData: "include",
+            credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
               },
-              body: JSON.stringify(body)
+            body: JSON.stringify(body)
         })
         .then (response => response.json())
         .then (r => {
