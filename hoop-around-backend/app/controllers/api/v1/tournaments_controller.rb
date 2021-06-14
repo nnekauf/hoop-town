@@ -15,9 +15,11 @@ class Api::V1::TournamentsController < ApplicationController
     def create
        
         tournament = Tournament.create(tournament_params)
+        tournament.organizer_id = session[:user_id]
         # binding.pry
         if tournament.save
-            tournament.organizer_id = session[:user_id]
+            
+            binding.pry
             render json: tournament
         else 
            binding.pry
