@@ -15,6 +15,7 @@ class Api::V1::TournamentsController < ApplicationController
     def create
        
         tournament = Tournament.create(tournament_params)
+        binding.pry
         render json: tournament
     end
 
@@ -29,6 +30,6 @@ class Api::V1::TournamentsController < ApplicationController
 
     def tournament_params
 
-        params.require(:tournament). permit(:name, :venue, :date_time, :host, :about, :street, :city, :state, :zipcode)
+        params.require(:tournament). permit(:name, :venue, :date_time, :host, :about, :street, :city, :state, :zipcode, :organizer_id)
     end
 end

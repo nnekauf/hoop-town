@@ -8,8 +8,8 @@ const initialState = {
     street: "",
     city: "",
     state: "",
-    zipcode: "",
-    organizerId: ""
+    zipcode: ""
+   
   }
   
  

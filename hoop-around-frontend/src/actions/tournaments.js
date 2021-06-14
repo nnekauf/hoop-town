@@ -42,19 +42,18 @@ export const getAllTournaments = () => {
 }
 
 export const createTournament = (formData, history) => {
+    
     const body = {
         user: {
             name: formData.name,
             venue: formData.venue,
-            date: formData.date_time,
+            date_time: formData.date_time,
             host: formData.host,
             about: formData.about,
             street: formData.street,
             city: formData.city,
             state: formData.state,
-            zipcode: formData.zipcode,
-            organizer_id: formData.organizerId
-
+            zipcode: formData.zipcode
         }
     }
     return dispatch => {

@@ -7,7 +7,7 @@ import { createTournament } from '../actions/tournaments'
 const NewTournamentForm = ({formData, updateTournamentForm, createTournament, history, state}) => {    
 
     const handleChange = event => {
-        console.log("trigger Handle change")
+      event.preventDefault()
         const { name, value } = event.target
         const updatedFormInfo = {
             ...formData,
@@ -20,31 +20,38 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
         event.preventDefault()
         createTournament(formData, history)
       }
-    formData.organizerId = state.currentUser.id
+      // console.log(user.username)
+    // formData.organizerId = `${props.user.username}`
+
     return (
-      
+      <>
+      {/* {`Organizer: ${user.username}(you)`} */}
         <form onSubmit={handleSubmit}>
           <input placeholder="name" name="name" onChange={handleChange} value={formData.name} />
           <input placeholder="venue" name="venue" onChange={handleChange}   value={formData.venue}/>
-          <input placeholder= "Date and time" name="date" onChange={handleChange} value={formData.date}/>
+          <input placeholder= "Date and time" name="date" type="datetime-local" onChange={handleChange} value={formData.date}/>
           <input placeholder="host" name="host"  onChange={handleChange}  value={formData.host} />
-          <input placeholder="about" name="about" onChange={handleChange}   value={formData.about} />
+          <input placeholder="about" name="about"  onChange={handleChange}   value={formData.about} />
           <input placeholder="street" name="street"   onChange={handleChange}  value={formData.street} />
           <input placeholder="city" name="city"     onChange={handleChange}    value={formData.city} />
           <input placeholder="state" name="state"    onChange={handleChange}   value={formData.state} />
-          <input placeholder="zipcode" name="zipcode"  onChange={handleChange} value={formData.zipcode} />
-          {`Organizer: ${state.currentUser.username} (you)`} <input hidden value={formData.organizerId} />
+          <input placeholder="zipcode" name="zipcode" type="number" onChange={handleChange} value={formData.zipcode} />
+          
+          {/* {`Organizer: ${userCopy.username}(you)`} <input hidden value={formData.organizerId} /> */}
           <input type="submit" value="Create Tournament"/> 
+          {/* {console.log("comp",props)} */}
         </form>
+        </>
     )
 };
 
   const mapStateToProps = state => {
     return {
-      state,
+      
       formData: state.tournamentForm,
       
     }
   }
   
   export default connect(mapStateToProps, {updateTournamentForm, createTournament})(NewTournamentForm)
+  // export default NewTournamentForm
