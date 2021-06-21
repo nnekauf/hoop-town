@@ -19,10 +19,10 @@ class Api::V1::TournamentsController < ApplicationController
         # binding.pry
         if tournament.save
             
-            binding.pry
+            # binding.pry
             render json: tournament
         else 
-           binding.pry
+        #    binding.pry
             render json: {message: tournament.errors.full_messages}
         end
     end
