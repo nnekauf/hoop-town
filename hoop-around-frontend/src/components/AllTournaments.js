@@ -7,7 +7,8 @@ const AllTournaments = state => {
 
 
   return (
-    <>
+    <div className= "allTournaments">
+    <br/>
       { state.tournaments.length>0 ?
         <>
           {state.tournaments.map(t => (<TournamentCard tournament = {t}/>))}
@@ -17,7 +18,7 @@ const AllTournaments = state => {
           No Tournaments Available
         </>
       }
-    </>
+    </div>
   )
 }
 
