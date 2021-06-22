@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import TournamentCard from './TournamentCard'
 const AllTournaments = state => {
 
-  
+
+
   return (
     <>
       { state.tournaments.length>0 ?

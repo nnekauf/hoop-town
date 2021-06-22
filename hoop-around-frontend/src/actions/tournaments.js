@@ -72,7 +72,7 @@ export const createTournament = (formData, history) => {
             } else {
                 dispatch(addTournament(r))
                 dispatch(resetTournamentForm())
-                history.push('/')
+                history.push(`/tournaments/${r.id}`)
                 // mostlikely want to redirect to this tournament show page
             }
         })
