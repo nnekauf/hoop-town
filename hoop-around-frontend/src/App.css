@@ -47,6 +47,10 @@
 
 }
 
+.tournamentInfo {
+    line-height : 0px;
+    
+}
 #wrapper { display: flex; }
 
 .homePage {

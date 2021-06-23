@@ -22,8 +22,9 @@ const TournamentCard = ({tournament}) => {
       </div>
 
       <div className = "tournamentInfo">
-        <div className = "tournamentDateTime"> <h4> {tournament.date_time}</h4> </div>
-      
+        <div id="wrapper">
+          <div className = "tournamentDateTime"> <h4> {tournament.date_time}</h4> </div>
+        </div>
         <div className = "tournamentLocation">
           <div id="wrapper">
               <h4> {tournament.venue} | </h4> <h4>{tournament.city}</h4>, <h4>{tournament.state}</h4>
