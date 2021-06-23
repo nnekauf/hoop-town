@@ -9,4 +9,7 @@ class TournamentSerializer < ActiveModel::Serializer
     
   end
   
+  def date_time
+    object.date_time.strftime("%a, %b %d, %I:%M %p")
+  end
 end

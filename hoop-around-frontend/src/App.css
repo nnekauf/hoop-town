@@ -31,21 +31,33 @@
     transition: all 0.3s ease-in-out;
     background-color: #101010;
 }
-
+.allTournaments {
+    background-color: #E4E4E4
+}
 .tournamentCard {
-    border-radius: 12px;
-  height: 214px;
-  width: 1000px;
+    border-radius: 0px;
+  height: 200px;
+  width: 875px;
   padding: 8px;
   padding-left: 15px;
     justify-content: center;
-    margin: 5px auto;
-    background-color: #c7c7c7;
+    margin: 30px auto;
+    background-color: white;
     text-align: center;
 
 }
 
+.tournamentInfo {
+    line-height : 0px;
+    
+}
 #wrapper { display: flex; }
+
+.tournamentShowPage{
+    background-color: #E4E4E4;
+    height: 1000px;
+    text-align: center;
+}
 
 .homePage {
     border-radius: 12px;

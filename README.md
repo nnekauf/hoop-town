@@ -1,6 +1,6 @@
 # HoopAround
 
-Street Basketball gives a platform for the most skillfull and athletic players in the neighborhood. This application provides a platform for teams to organize tournaments, individual players to sign up for the games they call ball in, and spectators to enjoy the show! 
+Street Basketball gives a platform for the most skillfull and athletic players and coaches in the neighborhood. This application provides a platform for them to find and organize tournaments! 
 
 
 ## Getting Started
@@ -27,6 +27,8 @@ To begin HoopAround, navigate to the hoop-around-backend directory within your t
     $ npm start
 
 At this point, the web application should be opened in your browser.
+Please note that the frontend browser should be hosted on http://localhost:3001
+and the backend browser should be hosted on http://localhost:3000
 
 
 You have now entered into HoopAround, enjoy!
