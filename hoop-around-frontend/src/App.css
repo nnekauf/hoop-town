@@ -53,6 +53,12 @@
 }
 #wrapper { display: flex; }
 
+.tournamentShowPage{
+    background-color: #E4E4E4;
+    height: 1000px;
+    text-align: center;
+}
+
 .homePage {
     border-radius: 12px;
   height: 214px;

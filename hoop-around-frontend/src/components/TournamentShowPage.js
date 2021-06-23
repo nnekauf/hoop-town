@@ -14,16 +14,21 @@ const TournamentShowPage = ({tournament}) => {
   }
 
   return (
-      <div > <br/> <br/>
-        tournament show page
-        {tournament.name}
-         <h2> {tournament.name}</h2> <h3> {tournament.host}</h3>
-        <h4> {tournament.date_time}</h4>
-        <h4> {tournament.venue}</h4>| <h4>{tournament.city}</h4>, <h4>{tournament.state}</h4>
+      <div className="tournamentShowPage"> <br/> <br/>
+        
+      
+        <h2> {tournament.name} TOURNAMENT</h2> <h3> HOSTED BY: {tournament.host}</h3>
         <br/>
-        <h4> # of teams | {tournament.teams.length}</h4>  
-        <h4> {tournament.about}</h4>
-       
+        <h4>LOCATION: {tournament.venue} {tournament.city}, {tournament.state} {tournament.zipcode}</h4>
+        
+        <h4>TIME: {tournament.date_time}</h4>
+        
+        
+        <br/>
+         
+        <h4> ABOUT THIS TOURNAMENT</h4>
+        <p> {tournament.about}</p>
+        <h4> # of teams | {tournament.teams.length}</h4> 
       </div>
   )  
 
