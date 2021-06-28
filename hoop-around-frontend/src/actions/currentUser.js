@@ -64,6 +64,7 @@ export const login = (credentials, history) => {
                 dispatch(setCurrentUser(r))
                 
                 dispatch(resetLoginForm())
+                dispatch(getAllTournaments())
                 history.push('/')
             }
         })
@@ -118,8 +119,8 @@ export const signup = (credentials, history) => {
             } else {
         
                 dispatch(setCurrentUser(r))
-                // dispatch(login(r,history))
                 dispatch(resetSignupForm())
+                dispatch(getAllTournaments())
                 history.push('/')
             }
         })
