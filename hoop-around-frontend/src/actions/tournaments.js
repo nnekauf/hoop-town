@@ -1,5 +1,5 @@
 import {resetTournamentForm} from './tournamentForm.js'
-//synchronout
+//synchronous
 export const showAllTournaments = tournaments => {
     return {
         type: "ALL",
@@ -14,7 +14,7 @@ export const addTournament = tournament => {
     }
   }
 
-// asych
+// async
 
 
 export const getAllTournaments = () => {
@@ -32,7 +32,6 @@ export const getAllTournaments = () => {
             if (r.error) {
                 alert(r.error)
             } else {
-                // console.log(r.map => (r.date_time))
                 dispatch(showAllTournaments(r))
     
             }
@@ -73,7 +72,6 @@ export const createTournament = (formData, history) => {
                 dispatch(addTournament(r))
                 dispatch(resetTournamentForm())
                 history.push(`/tournaments/${r.id}`)
-                // mostlikely want to redirect to this tournament show page
             }
         })
         .catch(console.log)

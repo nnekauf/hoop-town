@@ -1,17 +1,9 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
-import { getAllTournaments } from '../actions/tournaments'
-import AllTournaments from './AllTournaments'
 
 
 const TournamentShowPage = ({tournament}) => {
  
-  function getTournament(array) {
-    return array.find(t=> t.id ===1)
-    
-    
-  }
 
   return (
       <div className="tournamentShowPage"> <br/> <br/>

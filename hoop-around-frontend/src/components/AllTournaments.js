@@ -1,10 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import { Link } from 'react-router-dom'
 import TournamentCard from './TournamentCard'
+
 const AllTournaments = state => {
-
-
 
   return (
     <div className= "allTournaments">
@@ -22,9 +20,9 @@ const AllTournaments = state => {
   )
 }
 
-  const mapStateToProps = state => {
-    return {
-      tournaments: state.tournaments
-    }
+const mapStateToProps = state => {
+  return {
+    tournaments: state.tournaments
   }
-  export default connect(mapStateToProps)(AllTournaments)
+}
+export default connect(mapStateToProps)(AllTournaments)

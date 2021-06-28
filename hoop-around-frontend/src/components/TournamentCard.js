@@ -1,10 +1,10 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
-import { Link } from 'react-router-dom'
-import TournamentShowPage from './TournamentShowPage'
 
 const TournamentCard = ({tournament}) => {
+
   const history = useHistory()
+
   const handleClick = () => {
       let path = `/tournaments/${tournament.id}`; 
        history.push(path);
@@ -42,7 +42,6 @@ const TournamentCard = ({tournament}) => {
         
         
         
-        {/* <Link className = "homeButton" exact to={`/tournaments/${tournament.id}`}>See More</Link> */}
        
     </div>
   )  

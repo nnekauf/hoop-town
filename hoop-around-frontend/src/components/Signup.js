@@ -20,12 +20,7 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
         signup(credentials, history)
       }
     
-    //   const handleButton = event => {
-    //       event.preventDefault()
-    //     //   debugger
-    //       credentials.role = event.target.value
-    //       updateSignupForm(updatedFormInfo)
-    //   }
+
     
     return (
       <form onSubmit={handleSubmit}>
@@ -53,7 +48,7 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
       </form>
     )
   }
-// I somehow need to integrate team association depending on the type of user they are
+
   const mapStateToProps = state => {
     return {
       credentials: state.signupForm
