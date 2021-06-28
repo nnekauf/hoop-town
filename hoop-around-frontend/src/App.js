@@ -2,7 +2,6 @@ import React from 'react'
 import './App.css'
 import {connect} from 'react-redux'
 import {getCurrentUser} from "./actions/currentUser"
-import {getAllTournaments} from "./actions/tournaments"
 
 import NavBar from "./components/NavBar"
 import Home from './components/Home.js'
