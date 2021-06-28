@@ -4,7 +4,7 @@ import { updateTournamentForm } from '../actions/tournamentForm'
 import { createTournament } from '../actions/tournaments'
 
 
-const NewTournamentForm = ({formData, updateTournamentForm, createTournament, history, state}) => {    
+const NewTournamentForm = ({formData, updateTournamentForm, createTournament, history}) => {    
 
     const handleChange = event => {
       event.preventDefault()
@@ -20,12 +20,9 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
         event.preventDefault()
         createTournament(formData, history)
       }
-      // console.log(user.username)
-    // formData.organizerId = `${props.user.username}`
 
     return (
       <>
-      {/* {`Organizer: ${user.username}(you)`} */}
         <form onSubmit={handleSubmit}>
           <input placeholder="name" name="name" onChange={handleChange} value={formData.name} />
           <input placeholder="venue" name="venue" onChange={handleChange}   value={formData.venue}/>
@@ -37,9 +34,7 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
           <input placeholder="state" name="state"    onChange={handleChange}   value={formData.state} />
           <input placeholder="zipcode" name="zipcode" type="number" onChange={handleChange} value={formData.zipcode} />
           
-          {/* {`Organizer: ${userCopy.username}(you)`} <input hidden value={formData.organizerId} /> */}
           <input type="submit" value="Create Tournament"/> 
-          {/* {console.log("comp",props)} */}
         </form>
         </>
     )
@@ -54,4 +49,3 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
   }
   
   export default connect(mapStateToProps, {updateTournamentForm, createTournament})(NewTournamentForm)
-  // export default NewTournamentForm
