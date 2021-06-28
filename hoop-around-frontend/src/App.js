@@ -12,7 +12,6 @@ import AllTournaments from "./components/AllTournaments"
 import NewTournamentForm from "./components/NewTournamentForm"
 import { Route, Switch, withRouter } from 'react-router-dom'
 import TournamentShowPage from './components/TournamentShowPage'
-// import { Route} from 'react-router-dom'
 
 class App extends React.Component {
 
@@ -27,37 +26,26 @@ class App extends React.Component {
     return(t ? <TournamentShowPage tournament={t}/> : <> Not found </>)
   }
 
-  // renderForm = (props) => {
-  //   parseInt(props.match.params)
-  //   let user = this.props.currentUser
-  // //  let userCopy = arr.find(t => t.id)
-  // // let user = arr.map(object=> object)
-  // // let userCopy = user[0]
-  // // console.log(this.props.currentUser)
-  //   return(<NewTournamentForm user ={user}/>)
-  // }
+
 
   render(){
-    // const tournaments = this.props
+
     return (
       <div className="App">
-        {/* {console.log("outsie",this.props)} */}
+
       <NavBar />
-      {/* {console.log("hello")}
-      {console.log(state.tournaments)} */}
+      
         <Switch>
           <Route exact path='/'component={Home}/>
            <Route exact path='/login' component={Login}/>
            <Route exact path='/signup' component={Signup}/>
-           <Route exact path='/tournaments'component={AllTournaments}/>
-           <Route exact path='/tournaments/new'component={NewTournamentForm}/>
-           {/* <Route exact path='/tournaments/new'render={this.renderForm}/> */}
-          <Route exact path='/tournaments/:id'render={ this.renderTournament}/>
-          
-           {/* <Route exact path='/tournaments/map'component={TournamentsMap}/>
+           {this.props.loggedIn ? <Route exact path='/tournaments'component={AllTournaments}/> : <Login/>}
+           {this.props.loggedIn ? <Route exact path='/tournaments/new'component={NewTournamentForm}/> : <Login/>}
+           {this.props.loggedIn ? <Route exact path='/tournaments/:id'render={ this.renderTournament}/> : <Login/>}
+
+           {/*
+           <Route exact path='/tournaments/map'component={TournamentsMap}/>
            <Route exact path='/my-tournaments'component={MyTournaments}/>
-           
-           
            <Route exact path='/tournaments/:id/register'component={TournamentRegistration}/>
            <Route exact path='/my-profile'component={Profile}/>
            <Route exact path='/about/who-we-are'component={About1}/>
@@ -80,5 +68,4 @@ export default withRouter(connect(mapStateToProps, { getCurrentUser })(App));
 
 
 
-// export default connect(mapStateToProps, {getCurrentUser})(App);
 

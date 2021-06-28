@@ -3,7 +3,7 @@ import { resetLoginForm } from "./loginForm.js"
 import { resetSignupForm } from "./signupForm.js"
 import { getAllTournaments } from "./tournaments.js"
 
-//synchronout
+//synchronous
 export const setCurrentUser = user => {
     return {
         type: "SET_CURRENT_USER",
@@ -18,7 +18,7 @@ export const clearCurrentUser = user => {
     }
 }
 
-// asych
+// async
 
 
 export const getCurrentUser = (credentials) => {
@@ -64,6 +64,7 @@ export const login = (credentials, history) => {
                 dispatch(setCurrentUser(r))
                 
                 dispatch(resetLoginForm())
+                dispatch(getAllTournaments())
                 history.push('/')
             }
         })
@@ -81,7 +82,6 @@ export const logout = () => {
             
         })
         
-    //   history.push('/')
     }
 }
 
@@ -118,8 +118,8 @@ export const signup = (credentials, history) => {
             } else {
         
                 dispatch(setCurrentUser(r))
-                // dispatch(login(r,history))
                 dispatch(resetSignupForm())
+                dispatch(getAllTournaments())
                 history.push('/')
             }
         })

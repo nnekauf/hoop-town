@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   post "/api/v1/signup", to: "api/v1/users#create"
   delete "/api/v1/logout", to: "api/v1/sessions#destroy"
   get "/api/v1/get_current_user", to: "api/v1/sessions#get_current_user"
-  
+  #   get "/auth/facebook/callback", to: "sessions#create_with_fb"
+
   namespace :api do
     namespace :v1 do
       resources :registrations
@@ -14,11 +15,7 @@ Rails.application.routes.draw do
       #I dont want to see team profiles just yet
       resources :users 
       # I only want to see the current user, no one else
-      resources :lists
       
-       post '/logout', to: "sessions#destroy" 
-    
-      #   get "/auth/facebook/callback", to: "sessions#create_with_fb"
     end
   end
 
