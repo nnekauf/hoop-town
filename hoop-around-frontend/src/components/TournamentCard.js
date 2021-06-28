@@ -12,7 +12,7 @@ const TournamentCard = ({tournament}) => {
  
 
   return (
-    <div className = "tournamentCard" a href={`/tournaments/${tournament.id}`} onClick ={handleClick}>
+    <div className = "tournamentCard"  href={`/tournaments/${tournament.id}`} onClick ={handleClick}>
 
       <div className = "tournamentTitle">
         <div id="wrapper">
