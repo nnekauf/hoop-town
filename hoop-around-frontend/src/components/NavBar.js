@@ -6,7 +6,7 @@ import Logout from './Logout'
 const NavBar = ({ state, loggedIn }) => {
   
   return (
-    <header class="header">
+    <header className="header">
     <div className="NavBar">
       { loggedIn ?
        <>
@@ -33,10 +33,10 @@ const NavBar = ({ state, loggedIn }) => {
       }
       <br/>
       
-      <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+      <div className="hamburger">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
       </div>
     </div>
     </header>
