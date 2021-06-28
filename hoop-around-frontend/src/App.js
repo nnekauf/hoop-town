@@ -39,9 +39,9 @@ class App extends React.Component {
           <Route exact path='/'component={Home}/>
            <Route exact path='/login' component={Login}/>
            <Route exact path='/signup' component={Signup}/>
-           <Route exact path='/tournaments'component={AllTournaments}/>
-           <Route exact path='/tournaments/new'component={NewTournamentForm}/>
-           <Route exact path='/tournaments/:id'render={ this.renderTournament}/>
+           {this.props.loggedIn ? <Route exact path='/tournaments'component={AllTournaments}/> : <Login/>}
+           {this.props.loggedIn ? <Route exact path='/tournaments/new'component={NewTournamentForm}/> : <Login/>}
+           {this.props.loggedIn ? <Route exact path='/tournaments/:id'render={ this.renderTournament}/> : <Login/>}
 
            {/*
            <Route exact path='/tournaments/map'component={TournamentsMap}/>
