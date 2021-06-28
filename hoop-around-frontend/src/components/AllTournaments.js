@@ -9,7 +9,7 @@ const AllTournaments = state => {
     <br/>
       { state.tournaments.length>0 ?
         <>
-          {state.tournaments.map(t => (<TournamentCard tournament = {t}/>))}
+          {state.tournaments.map(t => (<TournamentCard tournament = {t} key = {t.id}/>))}
         </>
         :
         <>
