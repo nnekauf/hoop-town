@@ -23,7 +23,7 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
 
     return (
       <>
-        <form onSubmit={handleSubmit}>
+        <form className= "newTournamentForm" onSubmit={handleSubmit}>
           <input placeholder="name" name="name" onChange={handleChange} value={formData.name} />
           <input placeholder="venue" name="venue" onChange={handleChange}   value={formData.venue}/>
           <input placeholder= "Date and time" name="date" type="datetime-local" onChange={handleChange} value={formData.date}/>
