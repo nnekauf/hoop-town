@@ -12,7 +12,11 @@
    padding: 25px 30px;
     
    }   
-
+.title {
+    text-align: center;
+    font-weight: bold;
+   
+}
 .newTournamentFrom {
     max-width: 700px;
     width: 100%;

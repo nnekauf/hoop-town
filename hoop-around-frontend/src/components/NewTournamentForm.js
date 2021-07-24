@@ -23,6 +23,7 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
 
     return (
       <div className= "newTournamentContainer">
+        <div className = "title">Create a New Tournament </div> <br/>
         <form className= "newTournamentForm" onSubmit={handleSubmit}>
           <div className = "tournamentDetails">
             
