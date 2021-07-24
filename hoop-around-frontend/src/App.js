@@ -2,7 +2,6 @@ import React from 'react'
 import './App.css'
 import {connect} from 'react-redux'
 import {getCurrentUser} from "./actions/currentUser"
-
 import NavBar from "./components/NavBar"
 import Home from './components/Home.js'
 import Login from "./components/Login"
@@ -42,14 +41,7 @@ class App extends React.Component {
            {this.props.loggedIn ? <Route exact path='/tournaments/new'component={NewTournamentForm}/> : <Login/>}
            {this.props.loggedIn ? <Route exact path='/tournaments/:id'render={ this.renderTournament}/> : <Login/>}
 
-           {/*
-           <Route exact path='/tournaments/map'component={TournamentsMap}/>
-           <Route exact path='/my-tournaments'component={MyTournaments}/>
-           <Route exact path='/tournaments/:id/register'component={TournamentRegistration}/>
-           <Route exact path='/my-profile'component={Profile}/>
-           <Route exact path='/about/who-we-are'component={About1}/>
-           <Route exact path='/about/what-we-do'component={About2}/>
-           <Route exact path='/about/join'component={About3}/>  */}
+        
         </Switch>
         
       </div>
