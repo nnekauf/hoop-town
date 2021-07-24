@@ -51,6 +51,10 @@
 
 } */
 /* tournament card */
+
+.tournamentTitle{
+    margin-bottom: -20px;
+}
 .tournamentName{
     font-size:large;
     
@@ -58,6 +62,11 @@
 .tournamentHost{
     font-size: small;
     padding-top: 20px;
+}
+
+.tournamentDateTime{
+    color: red;
+    
 }
 .div span{
     background-color: #b6b6b6;
