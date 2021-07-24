@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
+import PlaceholderLogo from "../images/basketball_team_placeholder_logo.png"
 // import SaveButton from "./SaveButton"
 
 const TournamentCard = ({tournament}) => {
@@ -38,7 +39,7 @@ const TournamentCard = ({tournament}) => {
             <h4> # of teams | {tournament.teams.length}</h4> 
         </div>
       </div>  
-        
+        <img src={PlaceholderLogo}/>
          
         
         
