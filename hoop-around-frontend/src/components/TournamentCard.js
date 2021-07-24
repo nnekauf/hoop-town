@@ -15,11 +15,14 @@ const TournamentCard = ({tournament}) => {
 
   return (
     <div className = "tournamentCard"  href={`/tournaments/${tournament.id}`} onClick ={handleClick}>
-
+     <div className = "tournamentLogo">  <img src={PlaceholderLogo}/> </div>
+      <div className ="allText">
       <div className = "tournamentTitle">
         <div id="wrapper">
           <div className = "tournamentName"> <h2> {tournament.name}&nbsp;</h2> </div>
           <div className = "tournamentHost"> <h3>  {tournament.host}</h3> </div>
+         
+      
         </div>
       </div>
 
@@ -38,8 +41,10 @@ const TournamentCard = ({tournament}) => {
         <div id="wrapper">
             <h4> # of teams | {tournament.teams.length}</h4> 
         </div>
-      </div>  
-        <img src={PlaceholderLogo}/>
+      </div> 
+
+      </div>
+        
          
         
         

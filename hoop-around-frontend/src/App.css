@@ -88,8 +88,19 @@
         color:#707070;
     }
     /* .tournamentCount{
-        font-weight:-10px;
+        font-weight: normal !important;
     } */
+    .tournamentLogo{
+       display:flex;
+       height: 175px;
+       width: auto;
+       float: right;
+        vertical-align: middle;
+        padding-top: 10px;
+    }
+    .allText{
+        display: inline;
+    }
 /* tournament card end */
     .div span{
         background-color: #b6b6b6;
