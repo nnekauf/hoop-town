@@ -34,6 +34,9 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
               <input placeholder="host" name="host"  onChange={handleChange}  value={formData.host} />
             </div>
             <div className = "inputBox"> 
+              <input placeholder= "Date and time" name="date" type="datetime-local" onChange={handleChange} value={formData.date}/>        
+            </div>
+            <div className = "inputBox"> 
               <input placeholder="venue" name="venue" onChange={handleChange}   value={formData.venue}/>
             </div>
             <div className = "inputBox"> 
@@ -42,9 +45,7 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
             <div className = "inputBox"> 
               <input placeholder="city" name="city"     onChange={handleChange}    value={formData.city} />            
             </div>
-            <div className = "inputBox"> 
-              <input placeholder= "Date and time" name="date" type="datetime-local" onChange={handleChange} value={formData.date}/>        
-            </div>
+
             <div className = "inputBox"> 
               <input placeholder="state" name="state"    onChange={handleChange}   value={formData.state} />
             </div>
