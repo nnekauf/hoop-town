@@ -22,8 +22,8 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
       }
 
     return (
-      <div className= "grey">
-        <form className= "newTournamentForm" onSubmit={handleSubmit}>
+      <div className= "newTournamentForm">
+        <form onSubmit={handleSubmit}>
           <div className = "tournamentDetails">
             
             <div className = "inputBox">
