@@ -66,8 +66,13 @@
 
 .tournamentDateTime{
     color: red;
-    
+    margin-bottom: -20px;
 }
+
+.tournamentLocation{
+    color:#707070;
+}
+/* tournament card end */
 .div span{
     background-color: #b6b6b6;
 }
