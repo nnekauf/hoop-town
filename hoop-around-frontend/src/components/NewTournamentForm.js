@@ -45,15 +45,17 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
               <input placeholder= "Date and time" name="date" type="datetime-local" onChange={handleChange} value={formData.date}/>        
             </div>
             <div className = "inputBox"> 
-             <input placeholder="about" name="about"  onChange={handleChange}   value={formData.about} />
-            </div>
-            <div className = "inputBox"> 
               <input placeholder="state" name="state"    onChange={handleChange}   value={formData.state} />
             </div>
             <div className = "inputBox"> 
               <input placeholder="zipcode" name="zipcode" type="number" onChange={handleChange} value={formData.zipcode} />
+            </div>       
+            <div className = "inputBox"> 
+             <textarea placeholder="about" name="about"   onChange={handleChange}   value={formData.about}
+             rows ={10}
+             cols ={45} />
             </div>
-        
+
             <div className = "submitButton"> 
                 <input type="submit" value="Create Tournament"/>                         
             </div>
