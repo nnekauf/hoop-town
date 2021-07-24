@@ -8,26 +8,39 @@
    
 .newTournamentContainer {
     background-color: #E4E4E4;
-    padding: 25px 30px;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+   height: 100vh;
+   padding: 25px 30px;
+    
    }   
 
 .newTournamentFrom {
     max-width: 700px;
     width: 100%;
     justify-content: center;
+    align-items: center;
+    
+    
 }    
 
 .tournamentDetails {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
- 
+ .inputBox{
+     margin: 5px 0 ;
+     width:  25%;
+ }
 
+ .inputBox input{
+     display: block;
+     height: 45px;
+     width: 100%;
+ }
 
 /* .newTournament form .tournamentDetails{
  display: flex;
