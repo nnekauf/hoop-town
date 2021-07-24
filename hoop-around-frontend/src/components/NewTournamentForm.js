@@ -49,7 +49,7 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
               <input placeholder="state" name="state"    onChange={handleChange}   value={formData.state} />
             </div>
             <div className = "inputBox"> 
-              <input placeholder="zipcode" name="zipcode" type="number" onChange={handleChange} value={formData.zipcode} />
+              <input placeholder="zipcode" name="zipcode" type="text" maxlength="5" onChange={handleChange} value={formData.zipcode} />
             </div>       
             <div className = "inputBox"> 
              <textarea placeholder="about" name="about"   onChange={handleChange}   value={formData.about}
