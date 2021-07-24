@@ -22,8 +22,8 @@ const NewTournamentForm = ({formData, updateTournamentForm, createTournament, hi
       }
 
     return (
-      <div className= "newTournamentForm">
-        <form onSubmit={handleSubmit}>
+      <div className= "newTournamentContainer">
+        <form className= "newTournamentForm" onSubmit={handleSubmit}>
           <div className = "tournamentDetails">
             
             <div className = "inputBox">
