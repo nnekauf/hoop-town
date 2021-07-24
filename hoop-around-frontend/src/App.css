@@ -5,7 +5,7 @@
     /* background-color: #b6b6b6; */
    }
 
-.newTournamentForm {
+.tournamentDetails {
     display: flex;
     flex-direction: column;
     height: 100vh;
