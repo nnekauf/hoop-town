@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import AwesomeSlider from 'react-awesome-slider';
-import AwesomeSliderStyles from 'react-awesome-slider/src/styled/cube-animation.scss';
+
 import BasketballMatch from "../images/pexels-cottonbro-5275201.mp4"
 import Girl from "../images/pexels-cottonbro-6764723.mp4"
 import Guy from "../images/pexels-tima-miroshnichenko-5586534.mp4"
