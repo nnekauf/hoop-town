@@ -75,17 +75,26 @@
 
 
     }
-/*
+
     .tournamentLogo{
-        display:flex;
         height: 175px;
-        width: auto;
+        width: auto;   
+       
+        display:flex;  
         float: right;
+        /* text-align: right;   */
+        /* 
+        
          vertical-align: middle;
-         padding-top: 10px;
+        
+        
+
+        
+         
+         padding-top: 10px; */
       
      }
-
+/*
     .tournamentInfo {
         line-height : 0px;
         
