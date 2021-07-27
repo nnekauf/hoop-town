@@ -15,7 +15,7 @@ const TournamentCard = ({tournament}) => {
 
   return (
     <div className = "tournamentCard"  href={`/tournaments/${tournament.id}`} onClick ={handleClick}>
-     <div className = "tournamentLogo">  <img src={PlaceholderLogo}/> </div>
+      <img id = "tournamentLogo" src={PlaceholderLogo} /> 
       <div className ="allText">
       <div className = "tournamentTitle">
         <div id="wrapper">
