@@ -83,56 +83,42 @@
         padding-right: 15px;
         padding-top: 6px;
         float:right;
-        /* object-fit: cover; */
-       
-        
-        /*    */
-        /* 
-            float: right;
-        display:block;
-         vertical-align: middle;
-         max-height: 100%;
-        width: 100%; 
-        
-
-        
-         
-         padding-top: 10px; */
       
      }
     
-     /* div .tournamentLogo{
-         height: 175px;
-         width: auto
-     } */
-/*
-    .tournamentInfo {
-        line-height : 0px;
-        
-        font-size: 0cm; 
-    }
-
-    .allText{
+    /* .tournamentCardText{
         display: inline;
-    }
+    }   */
 
-    .tournamentTitle{
+    /* .tournamentTitle{
         margin-bottom: 13px;
         padding-top: 10px;
         
-    }    
+    }     */   
 
-    #wrapper { display: flex; }
-
-    .tournamentName{
+    /* .tournamentName{
         font-size: 50;
         font-weight: bold;
-    }
+    } */
 
-    .tournamentHost{
+    /* .tournamentHost{
         font-size: small;
         padding-top: 20px;
-    }
+    }    */
+
+    /* .tournamentInfo {
+        line-height : 0px;
+        
+        font-size: 0cm; 
+    } */
+
+
+
+
+/*
+    #wrapper { display: flex; }
+
+
 
     .tournamentInfo{
 

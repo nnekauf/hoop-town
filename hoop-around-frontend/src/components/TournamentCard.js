@@ -15,40 +15,36 @@ const TournamentCard = ({tournament}) => {
 
   return (
     <div className = "tournamentCard"  href={`/tournaments/${tournament.id}`} onClick ={handleClick}>
+    
       <img id = "tournamentLogo" src={PlaceholderLogo} /> 
-      <div className ="allText">
-      <div className = "tournamentTitle">
-        <div id="wrapper">
-          <div className = "tournamentName"> <h2> {tournament.name}&nbsp;</h2> </div>
-          <div className = "tournamentHost"> <h3>  {tournament.host}</h3> </div>
-         
       
-        </div>
-      </div>
-
-      <div className = "tournamentInfo">
-        <div id="wrapper">
-          <div className = "tournamentDateTime"> <h4> {tournament.date_time}</h4> </div>
-        </div>
-        <div className = "tournamentLocation">
+      <div className ="tournamentCardText">
+      
+        <div className = "tournamentTitle">
           <div id="wrapper">
-              <h4> {tournament.venue} |&nbsp;</h4> <h4>{tournament.city},&nbsp;</h4> <h4>{tournament.state}</h4>
+            <div className = "tournamentName"> <h2> {tournament.name}&nbsp;</h2> </div>
+            <div className = "tournamentHost"> <h3>  {tournament.host}</h3> </div>
           </div>
-         </div>
-      </div>
-          
-      <div className = "tournamentCount">
-        <div id="wrapper">
-            <h4> # of teams | {tournament.teams.length}</h4> 
         </div>
-      </div> 
+
+        <div className = "tournamentInfo">
+          <div id="wrapper">
+            <div className = "tournamentDateTime"> <h4> {tournament.date_time}</h4> </div>
+          </div>
+          <div className = "tournamentLocation">
+            <div id="wrapper">
+                <h4> {tournament.venue} |&nbsp;</h4> <h4>{tournament.city},&nbsp;</h4> <h4>{tournament.state}</h4>
+            </div>
+          </div>
+        </div>
+            
+        <div className = "tournamentCount">
+          <div id="wrapper">
+              <h4> # of teams | {tournament.teams.length}</h4> 
+          </div>
+        </div> 
 
       </div>
-        
-         
-        
-        
-        
        
     </div>
   )  
