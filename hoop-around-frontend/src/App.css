@@ -1,16 +1,23 @@
-
+/* ALL************************************************************** */
 * {
     text-transform: uppercase; 
     font-family: Arial;
-    /* background-color: #b6b6b6; */
-   }
 
-   /* home screen */
+   }
+/* ALL END********************************************************************** */
+
+
+/* HOME ********************* ************************************ */
    .carousel {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
   }
-   /* end of home screen */
+/* HOME END********************************************************************** */
+
+
+
+/* NEW TOURNAMENT PAGE********************************************************************** */
+
 .newTournamentContainer {
     background-color: #E4E4E4;
    height: 100vh;
@@ -50,64 +57,86 @@
      height: 45px;
      width: 100%;
  }
+/* NEW TOURNAMENT END********************************************************************** */
 
 
-/* tournament card */
+/* EACH INDIVIDUAL TOURNAMENT CARD********************************************************************** */
     .tournamentCard {
-        border-radius: 0px;
-    height: 200px;
-    width: 800px;
-    padding: 8px;
-    padding-left: 15px;
-        justify-content: center;
-        margin: 30px auto;
-        background-color: white;
-        text-align: center;
+        /* background-color: white;
+
+        height: 200px;
+        width: 800px;
+        padding: 8px;
+        padding-left: 15px;
+        margin: 30px auto; */
+        /* justify-content: center; */
+        /* text-align: center; */
+        /* border-radius: 0px; */
+
 
     }
+/*
+    .tournamentLogo{
+        display:flex;
+        height: 175px;
+        width: auto;
+        float: right;
+         vertical-align: middle;
+         padding-top: 10px;
+      
+     }
 
     .tournamentInfo {
         line-height : 0px;
         
+        font-size: 0cm; 
     }
-    #wrapper { display: flex; }
+
+    .allText{
+        display: inline;
+    }
 
     .tournamentTitle{
-        margin-bottom: -20px;
-    }
-    .tournamentName{
-        font-size:large;
+        margin-bottom: 13px;
+        padding-top: 10px;
         
+    }    
+
+    #wrapper { display: flex; }
+
+    .tournamentName{
+        font-size: 50;
+        font-weight: bold;
     }
+
     .tournamentHost{
         font-size: small;
         padding-top: 20px;
     }
 
+    .tournamentInfo{
+
+    }
+    
+ 
     .tournamentDateTime{
         color: red;
-        margin-bottom: -20px;
+        margin-bottom: -5px;
     }
 
     .tournamentLocation{
         color:#707070;
+        margin-bottom: 20px;
     }
-    /* .tournamentCount{
-        font-weight: normal !important;
+    .tournamentCount{
+        font-size: 0cm;
     } */
-    .tournamentLogo{
-       display:flex;
-       height: 175px;
-       width: auto;
-       float: right;
-        vertical-align: middle;
-        padding-top: 10px;
-    }
-    .allText{
-        display: inline;
-    }
-/* tournament card end */
-    .div span{
+
+
+/* EACH INDIVIDUAL TOURNAMENT CARD END********************************************************************** */
+
+/* ********************************************************************** */
+.div span{
         background-color: #b6b6b6;
     }
     .header{
@@ -134,6 +163,11 @@
         transition: all 0.3s ease-in-out;
         background-color: #101010;
     }
+/* ********************************************************************** */
+
+
+/* ********************************************************************** */
+
     .allTournaments {
         background-color: #E4E4E4
     }
@@ -163,3 +197,6 @@
     width: 500px;
     padding: 4px;
     }
+    /* .mainTitle {
+        font-size: 10em;
+    } */
