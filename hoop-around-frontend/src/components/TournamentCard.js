@@ -22,7 +22,7 @@ const TournamentCard = ({tournament}) => {
       
         <div className = "tournamentTitle">
           <div id="wrapper">
-            <div className = "tournamentName"> <h2> {tournament.name}&nbsp;</h2> </div>
+            <div id = "tournamentName"> <h2> {tournament.name}&nbsp;</h2> </div>
             <div className = "tournamentHost"> <h3>  {tournament.host}</h3> </div>
           </div>
         </div>
