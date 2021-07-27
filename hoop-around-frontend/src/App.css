@@ -1,9 +1,11 @@
 /* ALL************************************************************** */
-* {
-    text-transform: uppercase; 
-    font-family: Arial;
+    * {
+        text-transform: uppercase; 
+        font-family: Arial;
 
-   }
+    }
+    
+    #wrapper { display: flex; }
 /* ALL END********************************************************************** */
 
 
@@ -116,7 +118,7 @@
 
 
 /*
-    #wrapper { display: flex; }
+
 
 
 
