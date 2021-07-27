@@ -1,9 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel'
 import React, { Component } from 'react'  
-import Girl from "../images/pexels-cottonbro-6764723.mp4"
-import Guy from "../images/pexels-tima-miroshnichenko-5586534.mp4"
-import hoop from "../images/production ID_5192077.mp4"
-import team from "../images/pexels-cottonbro-5275201.mp4"
+import Players from "../images/carousel_2.mp4"
+import hoop from "../images/carousel_3.mp4"
+import team from "../images/carousel_1.mp4"
 
 const BootstrapCarousel = () => {
   
@@ -16,7 +15,7 @@ const BootstrapCarousel = () => {
             type="video/mp4"
             src={team}
             loop autoPlay muted
-           
+
             alt="First slide"
             />
             <Carousel.Caption>
@@ -28,7 +27,7 @@ const BootstrapCarousel = () => {
         <video
             className="carousel"
             type="video/mp4"
-            src={Guy}
+            src={Players}
             loop autoPlay muted
             alt="Second slide"
             />
@@ -52,20 +51,7 @@ const BootstrapCarousel = () => {
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
-        <video
-            className="carousel"
-            type="video/mp4"
-            src={Girl}
-            loop autoPlay muted
-            alt="Third slide"
-            />
-
-            <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-        </Carousel.Item>
+        
         </Carousel>
       </>
     )
