@@ -12,7 +12,7 @@ const BootstrapCarousel = () => {
         <Carousel>
         <Carousel.Item>
             <video
-            className="d-block w-100"
+            className="carousel"
             type="video/mp4"
             src={team}
             loop autoPlay muted
@@ -26,7 +26,7 @@ const BootstrapCarousel = () => {
         </Carousel.Item>
         <Carousel.Item>
         <video
-            className="d-block w-100"
+            className="carousel"
             type="video/mp4"
             src={Guy}
             loop autoPlay muted
@@ -40,7 +40,7 @@ const BootstrapCarousel = () => {
         </Carousel.Item>
         <Carousel.Item>
         <video
-            className="d-block w-100"
+            className="carousel"
             type="video/mp4"
             src={hoop}
             loop autoPlay muted
@@ -54,7 +54,7 @@ const BootstrapCarousel = () => {
         </Carousel.Item>
         <Carousel.Item>
         <video
-            className="d-block w-100"
+            className="carousel"
             type="video/mp4"
             src={Girl}
             loop autoPlay muted

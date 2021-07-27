@@ -5,7 +5,12 @@
     /* background-color: #b6b6b6; */
    }
 
-   
+   /* home screen */
+   .carousel {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+   /* end of home screen */
 .newTournamentContainer {
     background-color: #E4E4E4;
    height: 100vh;
