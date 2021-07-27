@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Girl from "../images/pexels-cottonbro-6764723.mp4"
 import Guy from "../images/pexels-tima-miroshnichenko-5586534.mp4"
 import hoop from "../images/production ID_5192077.mp4"
+import team from "../images/pexels-cottonbro-5275201.mp4"
 
 const BootstrapCarousel = () => {
   
@@ -10,9 +11,12 @@ const BootstrapCarousel = () => {
       <>
         <Carousel>
         <Carousel.Item>
-            <img
+            <video
             className="d-block w-100"
-            src="https://res.cloudinary.com/grohealth/image/upload/f_auto,fl_lossy,q_auto/v1581678662/DCUK/Content/iStock-959080376.jpg"
+            type="video/mp4"
+            src={team}
+            loop autoPlay muted
+           
             alt="First slide"
             />
             <Carousel.Caption>
@@ -21,9 +25,11 @@ const BootstrapCarousel = () => {
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-            <img
+        <video
             className="d-block w-100"
-            src="https://res.cloudinary.com/grohealth/image/upload/f_auto,fl_lossy,q_auto/v1581678662/DCUK/Content/iStock-959080376.jpg"
+            type="video/mp4"
+            src={Guy}
+            loop autoPlay muted
             alt="Second slide"
             />
 
@@ -33,9 +39,25 @@ const BootstrapCarousel = () => {
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-            <img
+        <video
             className="d-block w-100"
-            src="https://res.cloudinary.com/grohealth/image/upload/f_auto,fl_lossy,q_auto/v1581678662/DCUK/Content/iStock-959080376.jpg"
+            type="video/mp4"
+            src={hoop}
+            loop autoPlay muted
+            alt="Third slide"
+            />
+
+            <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+        <video
+            className="d-block w-100"
+            type="video/mp4"
+            src={Girl}
+            loop autoPlay muted
             alt="Third slide"
             />
 
