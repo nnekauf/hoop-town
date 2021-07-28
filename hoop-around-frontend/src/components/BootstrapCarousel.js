@@ -16,19 +16,19 @@ const BootstrapCarousel = () => {
    interval={4000}
       >
           <div>
-              <video src={team} 
+              <video id="carouselVideo" src={team} 
               type="video/mp4" 
               loop autoPlay muted 
               alt="First slide"/>
           </div>
           <div>
-              <video src={Players}
+              <video id="carouselVideo" src={Players}
               type="video/mp4" 
               loop autoPlay muted 
               alt="Second slide" />
           </div>
           <div>
-              <video src={hoop} 
+              <video id="carouselVideo" src={hoop} 
               type="video/mp4" 
               loop autoPlay muted 
               alt="Third slide"/>
