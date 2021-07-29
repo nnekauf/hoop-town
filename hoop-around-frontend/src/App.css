@@ -63,10 +63,11 @@
     font-size: 1.75em;
     
 }
-/* .homeButton:hover{
+
+.homeButton:hover{
     background-color: white;
     color:black;
-} */
+}
 .carousel-wrapper{
     position: absolute;
     z-index: 0;
