@@ -14,7 +14,7 @@ const Home = ({ state, loggedIn }) => {
         <div className = "homePage">
             <text className="mainTitle"> Hoop Around</text> <br/>
             <text className= "secondTitle" > Street Ball <b>Reinvented</b> </text>
-            <br/><br/>
+            <br/><br/><br/><br/><br/><br/>
             { loggedIn ?
                 <>
                     <Link className = "homeButton"  to="/tournaments"> Find Tournaments</Link> 
