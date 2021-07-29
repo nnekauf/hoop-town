@@ -19,7 +19,7 @@ const TournamentCard = ({tournament}) => {
       <img id = "tournamentLogo" src={PlaceholderLogo} /> 
       
       <div className ="tournamentCardText">
-      
+      <body>
         <div className = "tournamentTitle">
           <div id="wrapper">
             <div id = "tournamentName"> <h2> {tournament.name}&nbsp;</h2> </div>
@@ -43,7 +43,7 @@ const TournamentCard = ({tournament}) => {
               <h4> # of teams | {tournament.teams.length}</h4> 
           </div>
         </div> 
-
+      </body>
       </div>
        
     </div>

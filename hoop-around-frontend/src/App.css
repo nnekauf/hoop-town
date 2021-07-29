@@ -2,9 +2,15 @@
     * {
         text-transform: uppercase; 
         font-family: Arial;
-        font-size: 16px;
+        
     }
     
+   /* body{
+        
+   }*/
+     
+    
+
     #wrapper { display: flex; }
 /* ALL END********************************************************************** */
 
@@ -92,20 +98,22 @@
       
      }
     
-    /* .tournamentCardText{
-        display: inline;
-    }   */
+    .tournamentCardText{
+        font-size: 100%; /*16px = 100% */
+    }  
 
     /* .tournamentTitle{
         margin-bottom: 13px;
         padding-top: 10px;
         
-    }     */   
+    }         */
 
-    /* #tournamentName{
-        font-size: 1.5em;
+    #tournamentName{
+        
+        /* font-size: 3.125em;
         font-weight: bold;
-    } */
+        font-size: 3.125em; */
+    }
 
     /* .tournamentHost{
         font-size: small;
