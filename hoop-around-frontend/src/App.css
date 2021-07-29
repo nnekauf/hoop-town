@@ -40,6 +40,13 @@
     /* position: relative; */
     /* margin-top: 110; */
 }
+.secondTitle{
+    color:#707070;
+    font-size: 4em;
+    background-color: white;
+    padding-right: 45px;
+    padding-left: 45px;
+}
 .homeButton {
     border-radius: 10px;
     background-color: #ffffff;
