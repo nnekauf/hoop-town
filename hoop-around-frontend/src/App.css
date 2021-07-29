@@ -27,13 +27,13 @@
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
     z-index: 1;
-    height: 214px;
-    width: 1000px;
+    /* height: 214px;
+    width: 1000px; */
     /* padding: 8px;
     padding-left: 15px; */
     /* justify-content: center; */
     /* margin: 5px auto; */
-    background-color: #c7c7c7;
+    /* background-color: #c7c7c7; */
     text-align: center;
 }
 
@@ -188,9 +188,9 @@
 /* EACH INDIVIDUAL TOURNAMENT CARD END********************************************************************** */
 
 /* ********************************************************************** */
-.div span{
+/* .div span{
         background-color: #b6b6b6;
-    }
+    } */
     .header{
         border-bottom: 1px solid #E2E8F0;
     }
