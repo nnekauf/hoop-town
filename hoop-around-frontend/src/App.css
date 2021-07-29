@@ -2,7 +2,7 @@
     * {
         text-transform: uppercase; 
         font-family: Arial;
-
+        font-size: 16px;
     }
     
     #wrapper { display: flex; }
@@ -102,10 +102,10 @@
         
     }     */   
 
-    #tournamentName{
-        /* font-size: 50; */
-        /* font-weight: bold; */
-    }
+    /* #tournamentName{
+        font-size: 1.5em;
+        font-weight: bold;
+    } */
 
     /* .tournamentHost{
         font-size: small;
