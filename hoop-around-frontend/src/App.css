@@ -8,9 +8,10 @@
         font-family: 'UrbanJungle';
         src: local('UrbanJungle'), url(./fonts/UrbanJungle/Urbanjungledemo-ymAm.otf) format('opentype');
       }
-   /* body{
-        
-   }*/
+
+   .App{
+    font-size: 100%; /*16px = 100% */
+   }
      
     
 
@@ -38,6 +39,7 @@
 
 .mainTitle{
     font-family: UrbanJungle;
+    font-size: 10em;
 }
 .homeButton {
     border-radius: 10px;
