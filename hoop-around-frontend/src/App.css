@@ -4,7 +4,10 @@
         font-family: Arial;
         
     }
-    
+    @font-face {
+        font-family: 'UrbanJungle';
+        src: local('UrbanJungle'), url(./fonts/UrbanJungle/Urbanjungledemo-ymAm.otf) format('opentype');
+      }
    /* body{
         
    }*/
@@ -31,7 +34,10 @@
     /* margin: 5px auto; */
     background-color: #c7c7c7;
     text-align: center;
+}
 
+.mainTitle{
+    font-family: UrbanJungle;
 }
 .homeButton {
     border-radius: 10px;
