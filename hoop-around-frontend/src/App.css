@@ -79,6 +79,7 @@
         height: 200px;
         width: 800px;
         padding: 8px;
+        padding-top: 4px;
         padding-left: 15px;
         margin: 30px auto;
         
@@ -93,32 +94,32 @@
         height: 175px;
         width: auto;
         padding-right: 15px;
-        padding-top: 6px;
+        padding-top: 10px;
         float:right;
       
      }
     
     .tournamentCardText{
         font-size: 100%; /*16px = 100% */
+        line-height: 0%;
     }  
 
-    /* .tournamentTitle{
-        margin-bottom: 13px;
-        padding-top: 10px;
+    .tournamentTitle{
+        margin-bottom: -8px;
         
-    }         */
+        
+    }        
 
     #tournamentName{
-        
-        /* font-size: 3.125em;
-        font-weight: bold;
-        font-size: 3.125em; */
+        font-size: 2em;
+        white-space: nowrap;
+  
     }
 
-    /* .tournamentHost{
-        font-size: small;
-        padding-top: 20px;
-    }    */
+    .tournamentHost{
+        
+        padding-top: 28px;
+    }   
 
     /* .tournamentInfo {
         line-height : 0px;
@@ -126,28 +127,22 @@
         font-size: 0cm; 
     } */
 
-
-
-
-/*
-
-
-
-
-    .tournamentInfo{
-
-    }
-    
- 
     .tournamentDateTime{
         color: red;
-        margin-bottom: -5px;
+        margin-bottom: -15px;
     }
 
     .tournamentLocation{
         color:#707070;
         margin-bottom: 20px;
     }
+
+    
+/*
+
+
+
+
     .tournamentCount{
         font-size: 0cm;
     } */
