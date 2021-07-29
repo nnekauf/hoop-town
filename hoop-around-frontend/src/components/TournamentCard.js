@@ -40,7 +40,7 @@ const TournamentCard = ({tournament}) => {
             
         <div className = "tournamentCount">
           <div id="wrapper">
-               # of teams |&nbsp;<strong>{tournament.teams.length}</strong> 
+               # of teams |&nbsp;<span style={{ color: '#707070' }}><strong>{tournament.teams.length}</strong></span> 
           </div>
         </div> 
       </body>
