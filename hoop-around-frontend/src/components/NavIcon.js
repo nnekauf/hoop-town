@@ -1,15 +1,37 @@
 import React from 'react';
 import icon from "../images/navbar_icon.png"
 import NavBar from "./NavBar"
+import { connect } from 'react-redux'
 
+class NavIcon extends React.Component {
 
-function NavIcon(){
+    componentDidMount(){
+        this.state = { show: false};
+      }
 
-    return(
-        <div className="navBarIcon" onClick={() => {<NavBar/>}} >
-        <img id = "icon" src={icon} />
-        </div>
-    );
+    handleClick = () => {
+        this.setState({show: !show})
+      }
+
+      render (){
+            return(
+                <div className="navBarIcon" onClick={this.handleClick} >
+                <img id = "icon" src={icon} />
+                {/* { this.show ? <NavBar /> : null } */}
+                </div>
+            );         
+      }
+
 }
 
-export default NavIcon
+
+const mapStateToProps = state => {
+    return {
+      show: state.show,
+      
+      
+    }
+  }
+  
+  
+  export default connect(mapStateToProps)( NavIcon)

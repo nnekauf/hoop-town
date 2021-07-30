@@ -12,7 +12,8 @@ const combinedReducer = combineReducers({
   currentUser,
   loginForm,
   signupForm,
-  tournamentForm
+  tournamentForm,
+  
 })
 
 const store = createStore(combinedReducer, compose(applyMiddleware(thunk), composeWithDevTools()))
