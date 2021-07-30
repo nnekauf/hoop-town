@@ -161,6 +161,9 @@
       height: auto;
       width:100%
   }
+  .carousel-status{
+      display: none;
+  }
 /* HOME END********************************************************************** */
 
 
