@@ -18,6 +18,49 @@
     #wrapper { display: flex; }
 /* ALL END********************************************************************** */
 
+/* NAVBAR********************************************************************** */
+/* .div span{
+        background-color: #b6b6b6;
+    } */
+    /* .header{
+        border-bottom: 1px solid #E2E8F0;
+    } */
+
+    .NavBar {
+        color:white;
+        border:1px solid black;
+        border-radius: 8px;
+        
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem; */
+    }
+
+    .NavBar ul{
+        list-style: none;
+        margin: 0;
+        padding:0;
+    }
+
+    .NavBar a{
+        color:black;
+        text-decoration: none;
+    }
+    /* .hamburger {
+        display: none;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #101010;
+    } */
+/* NAVBAR END********************************************************************** */
 
 /* HOME ********************* ************************************ */
 
@@ -207,35 +250,7 @@
 
 /* EACH INDIVIDUAL TOURNAMENT CARD END********************************************************************** */
 
-/* ********************************************************************** */
-/* .div span{
-        background-color: #b6b6b6;
-    } */
-    .header{
-        border-bottom: 1px solid #E2E8F0;
-    }
 
-    .NavBar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1.5rem;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        background-color: #101010;
-    }
-/* ********************************************************************** */
 
 
 /* ********************************************************************** */
