@@ -7,7 +7,7 @@ function NavIcon(){
 
     return(
         <>
-        {icon}
+        <img id = "NavBarIcon" src={icon} />
         </>
     );
 }
