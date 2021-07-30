@@ -12,26 +12,24 @@ const NavBar = ({ state, loggedIn }) => {
        <>
         {state.currentUser.role} {state.currentUser.first_name}
         <ul>
-          <Link className = "navLink" to="/">Home</Link>
-          <Link className="navLink" to="/tournaments"> Find Tournaments </Link>
-          {/* <Link className="navLink" to="/tournament/saved"> My Saved Games </Link> */}
-          { state.currentUser.role === "coach" ? 
-            <>
-              <Link className="navLink" to="/tournaments/new"> Create Event </Link> 
-            </> 
+          <li><Link className = "navLink" to="/">Home</Link></li>
+          <li><Link className="navLink" to="/tournaments"> Find Tournaments </Link></li>
+          {/* <li><Link className="navLink" to="/tournament/saved"> My Saved Games </Link> </li>*/}
+          { state.currentUser.role === "coach" ?   
+              <li><Link className="navLink" to="/tournaments/new"> Create Event </Link></li> 
             : 
               null
           }
-          <Logout/>          
+          <li><Logout/></li>          
         </ul>
 
         </>   
       :
         <ul>
-          <Link className = "navLink" to="/">Home</Link>
-          <Link className = "navLink" to="/signup">Sign Up</Link> 
+          <li><Link className = "navLink" to="/">Home</Link></li>
+          <li><Link className = "navLink" to="/signup">Sign Up</Link> </li>
                     <br/>
-          <Link className = "navLink" to="/login">Log In</Link>
+          <li><Link className = "navLink" to="/login">Log In</Link></li>
         </ul>
       }
       <br/>
