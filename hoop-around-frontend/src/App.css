@@ -65,24 +65,25 @@
          text-decoration: none;
         padding-top: 20px;
         padding-bottom: 20px;
-        /* 
-        
-        
-        
-        margin: auto; */
-        /* 
-        
-         */
-    }
- .navLink:hover {
-     text-decoration: none;
-            background-color: whitesmoke;
-            color:grey;
-            font-weight: bold;
 
     }
-   
 
+    .navLink:hover {
+        text-decoration: none;
+        background-color: whitesmoke;
+        color:grey;
+        font-weight: bold;
+
+    }
+   .logoutButton {
+    padding: 10px;
+    padding-right: 45px;
+    padding-left: 45px;
+    font-size: 1em;
+   }
+    .logoutButton :hover{
+        color:red;
+    }
 
     /* .hamburger {
         display: none;
