@@ -11,9 +11,9 @@ const NavBar = ({ state, loggedIn }) => {
       
       { loggedIn ?
        <>
-        {state.currentUser.role} {state.currentUser.first_name}
+        <text><b>{state.currentUser.role} {state.currentUser.first_name}</b></text>
         
-        
+        <br/>
           <Link className = "navLink" to="/">Home</Link>
           <Link className="navLink" to="/tournaments"> Find Tournaments </Link>
           {/* <Link className="navLink" to="/tournament/saved"> My Saved Games </Link> */}
@@ -22,6 +22,7 @@ const NavBar = ({ state, loggedIn }) => {
             : 
               null
           }
+          <br/>
           <Logout/>          
         
 
