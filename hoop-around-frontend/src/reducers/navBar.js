@@ -6,8 +6,8 @@ const initialState = {
   
   const navBar = (state = initialState, action) => {
     switch (action.type) {
-      case "switch":
-        return !initialState
+      case "CHANGE":
+        return {...state, show: action.payload};
       default:
         return state
     }

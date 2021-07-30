@@ -1,5 +1,6 @@
 export const showNavBar = () => {
     return {
-      type: "switch"
+      type: "CHANGE",
+      payload: true
     }
   }
