@@ -11,9 +11,10 @@ const NavBar = ({ state, loggedIn }) => {
       { loggedIn ?
        <>
         {state.currentUser.role} {state.currentUser.first_name}
-        <Link className = "navLink" to="/">Home</Link>
-        <Link className="navLink" to="/tournaments"> Find Tournaments </Link>
-        {/* <Link className="navLink" to="/tournament/saved"> My Saved Games </Link> */}
+        <ul>
+          <Link className = "navLink" to="/">Home</Link>
+          <Link className="navLink" to="/tournaments"> Find Tournaments </Link>
+          {/* <Link className="navLink" to="/tournament/saved"> My Saved Games </Link> */}
           { state.currentUser.role === "coach" ? 
             <>
               <Link className="navLink" to="/tournaments/new"> Create Event </Link> 
@@ -21,15 +22,17 @@ const NavBar = ({ state, loggedIn }) => {
             : 
               null
           }
-        <Logout/>
+          <Logout/>          
+        </ul>
+
         </>   
       :
-        <>
+        <ul>
           <Link className = "navLink" to="/">Home</Link>
           <Link className = "navLink" to="/signup">Sign Up</Link> 
                     <br/>
           <Link className = "navLink" to="/login">Log In</Link>
-        </>
+        </ul>
       }
       <br/>
       
