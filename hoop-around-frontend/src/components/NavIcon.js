@@ -1,12 +1,12 @@
 import React from 'react';
 import icon from "../images/navbar_icon.png"
-// import NavBar from "./components/NavBar"
+import NavBar from "./NavBar"
 
 
 function NavIcon(){
 
     return(
-        <div className="navBarIcon">
+        <div className="navBarIcon" onClick={() => {<NavBar/>}} >
         <img id = "icon" src={icon} />
         </div>
     );
