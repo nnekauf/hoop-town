@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar"
 import Home from './components/Home.js'
 import Login from "./components/Login"
 import Signup from "./components/Signup"
+import NavIcon from "./components/NavIcon"
+
 import AllTournaments from "./components/AllTournaments"
 import NewTournamentForm from "./components/NewTournamentForm"
 import { Route, Switch, withRouter } from 'react-router-dom'
@@ -31,7 +33,7 @@ class App extends React.Component {
     return (
       <div className="App">
 
-      <NavBar />
+      <NavIcon/>
       
         <Switch>
           <Route exact path='/'component={Home}/>
