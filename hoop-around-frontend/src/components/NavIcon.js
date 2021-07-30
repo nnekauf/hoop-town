@@ -2,6 +2,7 @@ import React from 'react';
 import icon from "../images/navbar_icon.png"
 import NavBar from "./NavBar"
 import { connect } from 'react-redux'
+import { showNavBar } from "../actions/navBar.js"
 
 class NavIcon extends React.Component {
 
