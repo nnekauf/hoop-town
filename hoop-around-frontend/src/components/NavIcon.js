@@ -6,9 +6,9 @@ import icon from "../images/navbar_icon.png"
 function NavIcon(){
 
     return(
-        <>
-        <img id = "NavBarIcon" src={icon} />
-        </>
+        <div className="navBarIcon">
+        <img id = "icon" src={icon} />
+        </div>
     );
 }
 
