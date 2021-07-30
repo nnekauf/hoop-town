@@ -6,12 +6,12 @@ import { showNavBar } from "../actions/navBar.js"
 
 class NavIcon extends React.Component {
 
-    componentDidMount(){
-        this.state = { show: false};
-      }
+    // componentDidMount(){
+    //     this.state = { show: false};
+    //   }
 
     handleClick = () => {
-        this.setState({show: !show})
+        showNavBar()
       }
 
       render (){
