@@ -8,7 +8,7 @@ const NavBar = ({ state, loggedIn }) => {
   return (
     
     <div className="NavBar" >
-      😀
+      
       { loggedIn ?
        <>
         {state.currentUser.role} {state.currentUser.first_name}
