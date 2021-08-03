@@ -309,6 +309,11 @@
 
     .showPageCard{
         background-color: whitesmoke;
+        height: 80%;
+        width: 80%;
+        margin-left: 150px;
+        padding-top: 5%;
+        font-size: 2em;
     }
     /* .mainTitle {
         font-size: 10em;
