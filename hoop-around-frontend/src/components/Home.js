@@ -19,7 +19,7 @@ const Home = ({ state, loggedIn }) => {
                 <>
                     <Link className = "homeButton"  to="/tournaments"> Find Tournaments</Link> 
                         <br/><br/>
-                    <Link className = "homeButton"  to="/tournament/saved"> My Saved Games</Link>
+                    {/* <Link className = "homeButton"  to="/tournament/saved"> My Saved Games</Link> */}
                     <br/><br/>
                 </> 
                 :
