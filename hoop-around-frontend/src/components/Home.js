@@ -1,31 +1,38 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import BootstrapCarousel from './BootstrapCarousel' 
+import BasketballMatch from "../images/pexels-cottonbro-5275201.mp4"
 
 
 const Home = ({ state, loggedIn }) => {
-    
+
     return (
+        <>
+        {<BootstrapCarousel/>}
+
         <div className = "homePage">
-            <h1 className="mainTitle"> Hoop Around</h1>
-            <h2 className= "title" > Street Ball <b>Reinvented</b> </h2>
-            
+            <text className="mainTitle"> Hoop Town</text> <br/>
+            <text className= "secondTitle" > Street Ball <b>Reinvented</b> </text>
+            <br/><br/><br/><br/><br/><br/>
             { loggedIn ?
                 <>
-                    <Link className = "homeButton" exact to="/tournaments"> Find Tournaments</Link> 
+                    <Link className = "homeButton"  to="/tournaments"> Find Tournaments</Link> 
                         <br/><br/>
-                    <Link className = "homeButton" exact to="/tournament/saved"> My Saved Games</Link>
+                    {/* <Link className = "homeButton"  to="/tournament/saved"> My Saved Games</Link> */}
                     <br/><br/>
                 </> 
                 :
                 <>
-                    <Link className = "homeButton" exact to="/signup">Sign Up</Link> 
+                    <Link className = "homeButton"  to="/signup">Sign Up</Link> 
                     <br/> <br/>
-                    <Link className = "homeButton" exact to="/login">Log In</Link>
+                    <Link className = "homeButton"  to="/login">Log In</Link>
                 </>
             }
 
         </div>
+
+        </>
     )
 
 

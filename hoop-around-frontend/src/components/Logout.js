@@ -7,15 +7,16 @@ const Logout = ({ logout, history }) => {
 
    
   return (
-    <form onSubmit={event => {
+    <button className="logoutButton" onClick={event => {
         event.preventDefault()
         logout()
         history.push('/')
       }
+    
     }>
-
-      <input type="submit" value="Log Out"/>
-    </form>
+      logout
+      
+    </button>
   )
 }
 

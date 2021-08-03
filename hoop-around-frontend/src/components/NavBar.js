@@ -6,40 +6,40 @@ import Logout from './Logout'
 const NavBar = ({ state, loggedIn }) => {
   
   return (
-    <header class="header">
-    <div className="NavBar">
+    
+    <div className="NavBar" >
+      
       { loggedIn ?
        <>
-        {state.currentUser.role} {state.currentUser.first_name}
-        <Link className = "navLink" to="/">Home</Link>
-        <Link className="navLink" to="/tournaments"> Find Tournaments </Link>
-        {/* <Link className="navLink" to="/tournament/saved"> My Saved Games </Link> */}
-          { state.currentUser.role === "coach" ? 
-            <>
+        <text><b>{state.currentUser.role} {state.currentUser.first_name}</b></text>
+        
+        <br/>
+          <Link className = "navLink" to="/">Home</Link>
+          <Link className="navLink" to="/tournaments"> Find Tournaments </Link>
+          {/* <Link className="navLink" to="/tournament/saved"> My Saved Games </Link> */}
+          { state.currentUser.role === "coach" ?   
               <Link className="navLink" to="/tournaments/new"> Create Event </Link> 
-            </> 
             : 
               null
           }
-        <Logout/>
+          <br/>
+          <Logout/>          
+        
+
         </>   
       :
         <>
           <Link className = "navLink" to="/">Home</Link>
           <Link className = "navLink" to="/signup">Sign Up</Link> 
-                    <br/>
+                    
           <Link className = "navLink" to="/login">Log In</Link>
         </>
       }
       <br/>
       
-      <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-      </div>
+    
     </div>
-    </header>
+    
   )
   }
 
