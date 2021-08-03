@@ -12,7 +12,7 @@ const Home = ({ state, loggedIn }) => {
         {<BootstrapCarousel/>}
 
         <div className = "homePage">
-            <text className="mainTitle"> Hoop Around</text> <br/>
+            <text className="mainTitle"> Hoop Town</text> <br/>
             <text className= "secondTitle" > Street Ball <b>Reinvented</b> </text>
             <br/><br/><br/><br/><br/><br/>
             { loggedIn ?
