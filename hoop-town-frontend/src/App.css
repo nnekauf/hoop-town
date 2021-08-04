@@ -318,3 +318,42 @@
     /* .mainTitle {
         font-size: 10em;
     } */
+/*SIGNUP/LOGIN ********************************************************************** */
+.headerTitle{
+    font-family: UrbanJungle;
+    font-size: 6em;
+    text-align: center;
+    color: white;
+    background-color: #707070;
+    padding-top: 15px;
+}
+.backgroundBlack{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+.pageTitle{
+    text-align: center;
+    padding: 30px;
+    font-size: 4em;
+    font-weight: bold;
+}
+input{
+    border-radius: 50px;
+    padding: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-bottom: 2%;
+    
+}
+
+textarea{
+    border-radius: 25px;
+    padding:30px;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-bottom: 2%;
+
+}
+/* ********************************************************************** */

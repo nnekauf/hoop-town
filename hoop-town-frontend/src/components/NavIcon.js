@@ -8,17 +8,17 @@ import NavBar from "./NavBar"
 const NavIcon = () => {
 
 
-const [ghow, setShow] = useState(false);
+const [show, setShow] = useState(false);
     const handleClick = () => {
       
-      setShow(!ghow)
+      setShow(!show)
       }
 
       
             return(
                 <div className="navBarIcon" onClick={handleClick} >
                 <img id = "icon" src={icon} />
-                { ghow ? <NavBar /> : null }
+                { show ? <NavBar /> : null }
                 </div>
             );         
       
