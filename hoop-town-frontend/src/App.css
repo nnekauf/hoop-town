@@ -330,6 +330,7 @@
 .backgroundBlack{
     background-color: black;
     color: white;
+    
 }
 .pageTitle{
     text-align: center;
@@ -337,5 +338,15 @@
     font-size: 4em;
     font-weight: bold;
 }
+input{
+    border-radius: 50px;
+    padding: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
 
+textarea{
+    border-radius: 25px;
+    padding:30px;
+}
 /* ********************************************************************** */
