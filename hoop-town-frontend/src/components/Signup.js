@@ -54,7 +54,7 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
               </input>
           </label>
             <br/>
-            <br/>
+           
           <input type="submit" value="Sign Up"/>
         </form>
       </div>
