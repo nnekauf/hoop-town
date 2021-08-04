@@ -318,3 +318,14 @@
     /* .mainTitle {
         font-size: 10em;
     } */
+/*SIGNUP/LOGIN ********************************************************************** */
+.headerTitle{
+    font-family: UrbanJungle;
+    font-size: 5em;
+    text-align: center;
+    color: white;
+    background-color: #707070;
+    padding-top: 15px;
+}
+
+/* ********************************************************************** */

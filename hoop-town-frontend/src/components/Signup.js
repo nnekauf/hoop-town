@@ -23,6 +23,10 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
 
     
     return (
+      <>
+      <div className="headerTitle">
+        Hoop Town
+      </div>
       <form onSubmit={handleSubmit}>
         <input placeholder="First Name"  value={credentials.firstName} name="firstName" type="text" onChange={handleInputChange} />
         <input placeholder="Last Name"  value={credentials.lastName} name="lastName" type="text" onChange={handleInputChange} />
@@ -46,6 +50,7 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
         
         <input type="submit" value="Sign Up"/>
       </form>
+      </>
     )
   }
 
