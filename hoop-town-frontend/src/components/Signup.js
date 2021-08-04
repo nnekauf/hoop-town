@@ -24,35 +24,39 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
     
     return (
       <div className= "backgroundBlack">
-      <div className="headerTitle">
-        Hoop Town
-      </div>
-      <div className="pageTitle">
-        Sign Up
-      </div>
-      <form onSubmit={handleSubmit}>
-        <input placeholder="First Name"  value={credentials.firstName} name="firstName" type="text" onChange={handleInputChange} />
-        <input placeholder="Last Name"  value={credentials.lastName} name="lastName" type="text" onChange={handleInputChange} />
-        <input placeholder="Username"  value={credentials.username} name="username" type="text" onChange={handleInputChange} />
-        <input placeholder="Email"  value={credentials.email} name="email" type="email" onChange={handleInputChange} />
-        <input placeholder="Contact Number"  value={credentials.number} name="number" type="tel" onChange={handleInputChange} />
-        <input placeholder="Password"  value={credentials.password} name="password" type="password" onChange={handleInputChange} />
-        <textarea placeholder="Tell Us About Yourself"  value={credentials.bio} name="bio" type="text" onChange={handleInputChange} />
-        <input placeholder="Confirm Password"  value={credentials.passwordConfirmation} name="passwordConfirmation" type="password" onChange={handleInputChange} />
-        
-        <label> 
-            Coach
-            <input type="radio" name = "role" value={0} onChange ={handleInputChange}>
-            </input>
-        </label>
-        <label> 
-            Player
-            <input type="radio" name = "role" value={1} onChange ={handleInputChange}>
-            </input>
-        </label>
-        
-        <input type="submit" value="Sign Up"/>
-      </form>
+        <div className="headerTitle">
+          Hoop Town
+        </div>
+
+        <div className="pageTitle">
+          Sign Up
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          <input placeholder="First Name"  value={credentials.firstName} name="firstName" type="text" onChange={handleInputChange} /> 
+          <input placeholder="Last Name"  value={credentials.lastName} name="lastName" type="text" onChange={handleInputChange} /><br/>
+          <input placeholder="Username"  value={credentials.username} name="username" type="text" onChange={handleInputChange} /><br/>
+          <input placeholder="Email"  value={credentials.email} name="email" type="email" onChange={handleInputChange} /><br/>
+          <input placeholder="Contact Number"  value={credentials.number} name="number" type="tel" onChange={handleInputChange} /><br/>
+          <input placeholder="Password"  value={credentials.password} name="password" type="password" onChange={handleInputChange} /><br/>
+          <textarea placeholder="Tell Us About Yourself"  value={credentials.bio} name="bio" type="text" onChange={handleInputChange} /><br/>
+          <input placeholder="Confirm Password"  value={credentials.passwordConfirmation} name="passwordConfirmation" type="password" onChange={handleInputChange} /><br/>
+          <br/>
+          <b>Are You A</b> <br/><br/>
+          <label> 
+              Coach
+              <input type="radio" name = "role" value={0} onChange ={handleInputChange}>
+              </input>
+          </label>
+          <label> 
+              Player
+              <input type="radio" name = "role" value={1} onChange ={handleInputChange}>
+              </input>
+          </label>
+            <br/>
+            <br/>
+          <input type="submit" value="Sign Up"/>
+        </form>
       </div>
     )
   }

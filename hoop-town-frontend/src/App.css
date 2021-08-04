@@ -330,7 +330,7 @@
 .backgroundBlack{
     background-color: black;
     color: white;
-    
+    text-align: center;
 }
 .pageTitle{
     text-align: center;
@@ -343,10 +343,16 @@ input{
     padding: 10px;
     padding-right: 5%;
     padding-left: 5%;
+    margin-bottom: 2%;
+    
 }
 
 textarea{
     border-radius: 25px;
     padding:30px;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-bottom: 2%;
+
 }
 /* ********************************************************************** */
