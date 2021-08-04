@@ -23,7 +23,7 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
 
     
     return (
-      <>
+      <div className= "backgroundBlack">
       <div className="headerTitle">
         Hoop Town
       </div>
@@ -50,7 +50,7 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
         
         <input type="submit" value="Sign Up"/>
       </form>
-      </>
+      </div>
     )
   }
 
