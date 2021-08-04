@@ -27,6 +27,9 @@ const Signup = ({credentials, updateSignupForm, signup, history}) => {
       <div className="headerTitle">
         Hoop Town
       </div>
+      <div className="pageTitle">
+        Sign Up
+      </div>
       <form onSubmit={handleSubmit}>
         <input placeholder="First Name"  value={credentials.firstName} name="firstName" type="text" onChange={handleInputChange} />
         <input placeholder="Last Name"  value={credentials.lastName} name="lastName" type="text" onChange={handleInputChange} />

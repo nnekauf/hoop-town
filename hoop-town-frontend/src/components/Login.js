@@ -28,6 +28,9 @@ const Login = ({loginFormData, updateLoginForm, login, history}) => {
       <div className="headerTitle">
           Hoop Town
         </div>
+      <div className="pageTitle">
+        Log In
+      </div>
       <form onSubmit={handleSubmit}>
         <input placeholder="username"  value={loginFormData.username} name="username" type="text" onChange={handleInputChange} />
         <input placeholder="password"  value={loginFormData.password} name="password" type="text" onChange={handleInputChange} />

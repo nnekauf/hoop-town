@@ -321,7 +321,7 @@
 /*SIGNUP/LOGIN ********************************************************************** */
 .headerTitle{
     font-family: UrbanJungle;
-    font-size: 5em;
+    font-size: 6em;
     text-align: center;
     color: white;
     background-color: #707070;
@@ -330,6 +330,12 @@
 .backgroundBlack{
     background-color: black;
     color: white;
+}
+.pageTitle{
+    text-align: center;
+    padding: 30px;
+    font-size: 4em;
+    font-weight: bold;
 }
 
 /* ********************************************************************** */
