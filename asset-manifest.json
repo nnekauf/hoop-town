@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/hoop-town/static/css/main.8c675d15.chunk.css",
-    "main.js": "/hoop-town/static/js/main.2a46f560.chunk.js",
-    "main.js.map": "/hoop-town/static/js/main.2a46f560.chunk.js.map",
+    "main.css": "/hoop-town/static/css/main.d8f8ab55.chunk.css",
+    "main.js": "/hoop-town/static/js/main.a7f2e18f.chunk.js",
+    "main.js.map": "/hoop-town/static/js/main.a7f2e18f.chunk.js.map",
     "runtime-main.js": "/hoop-town/static/js/runtime-main.da80d589.js",
     "runtime-main.js.map": "/hoop-town/static/js/runtime-main.da80d589.js.map",
     "static/css/2.4ce9e501.chunk.css": "/hoop-town/static/css/2.4ce9e501.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.c025f6e6.chunk.js.map": "/hoop-town/static/js/2.c025f6e6.chunk.js.map",
     "index.html": "/hoop-town/index.html",
     "static/css/2.4ce9e501.chunk.css.map": "/hoop-town/static/css/2.4ce9e501.chunk.css.map",
-    "static/css/main.8c675d15.chunk.css.map": "/hoop-town/static/css/main.8c675d15.chunk.css.map",
+    "static/css/main.d8f8ab55.chunk.css.map": "/hoop-town/static/css/main.d8f8ab55.chunk.css.map",
     "static/js/2.c025f6e6.chunk.js.LICENSE.txt": "/hoop-town/static/js/2.c025f6e6.chunk.js.LICENSE.txt",
     "static/media/App.css": "/hoop-town/static/media/Urbanjungledemo-ymAm.e747c2a1.otf",
     "static/media/carousel_1.b5d36537.mp4": "/hoop-town/static/media/carousel_1.b5d36537.mp4",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.da80d589.js",
     "static/css/2.4ce9e501.chunk.css",
     "static/js/2.c025f6e6.chunk.js",
-    "static/css/main.8c675d15.chunk.css",
-    "static/js/main.2a46f560.chunk.js"
+    "static/css/main.d8f8ab55.chunk.css",
+    "static/js/main.a7f2e18f.chunk.js"
   ]
 }
