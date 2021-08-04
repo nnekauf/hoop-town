@@ -16,7 +16,7 @@ const [show, setShow] = useState(false);
 
       
             return(
-                <div className="navBarIcon" onMouseOver={handleClick} >
+                <div className="navBarIcon" onClick={handleClick} >
                 <img id = "icon" src={icon} />
                 { show ? <NavBar /> : null }
                 </div>
