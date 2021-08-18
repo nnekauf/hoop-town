@@ -29,7 +29,7 @@ export const getCurrentUser = (credentials) => {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                'Access-Control-Allow-Origin' : 'http://hoop-town.netlify.app',
+                
               },
               body: JSON.stringify(credentials)
         })
