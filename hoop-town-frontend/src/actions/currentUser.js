@@ -24,6 +24,7 @@ export const clearCurrentUser = user => {
 export const getCurrentUser = (credentials) => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/get_current_user", {
+            mode: 'cors',
             credentials: "include",
             method: "GET",
             headers: {
