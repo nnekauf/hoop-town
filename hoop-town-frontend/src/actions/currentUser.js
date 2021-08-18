@@ -50,6 +50,7 @@ export const getCurrentUser = (credentials) => {
 export const login = (credentials, history) => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/login/", {
+            mode: 'cors',
             credentials: "include",
             method: "POST",
             headers: {
