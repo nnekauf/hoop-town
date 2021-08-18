@@ -23,13 +23,13 @@ export const clearCurrentUser = user => {
 
 export const getCurrentUser = (credentials) => {
     return dispatch => {
-        return fetch("http://localhost:3000/api/v1/get_current_user", {
+        return fetch("/get_current_user", {
             mode: 'cors',
             credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                'Access-Control-Allow-Origin' : 'http://hoop-town.netlify.app',
+               
               },
               body: JSON.stringify(credentials)
         })
