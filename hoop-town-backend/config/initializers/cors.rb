@@ -10,7 +10,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'http://hoop-town.netlify.app'
 
     resource '*',
-      headers: :any,
+      headers: '*',
+   
+  
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
       credentials: true 
   end
