@@ -36,7 +36,7 @@ class App extends React.Component {
       <NavIcon/>
       
         <Switch>
-          <Route exact path='/home'component={Home}/>
+          <Route exact path='/'component={Home}/>
            <Route exact path='/login' component={Login}/>
            <Route exact path='/signup' component={Signup}/>
            {this.props.loggedIn ? <Route exact path='/tournaments'component={AllTournaments}/> : <Login/>}

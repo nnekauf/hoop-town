@@ -1,8 +1,6 @@
-
 import { resetLoginForm } from "./loginForm.js"
 import { resetSignupForm } from "./signupForm.js"
 import { getAllTournaments } from "./tournaments.js"
-
 //synchronous
 export const setCurrentUser = user => {
     return {
@@ -10,21 +8,16 @@ export const setCurrentUser = user => {
         user
     }
 }
-
 export const clearCurrentUser = user => {
     return {
         type: "CLEAR_CURRENT_USER",
         user
     }
 }
-
 // async
-
-
 export const getCurrentUser = (credentials) => {
     return dispatch => {
-        return fetch("/get_current_user/", {
-            mode: 'cors',
+        return fetch("http://localhost:3000/api/v1/get_current_user", {
             credentials: "include",
             method: "GET",
             headers: {
@@ -46,16 +39,13 @@ export const getCurrentUser = (credentials) => {
         .catch(console.log)
     }
 }
-
 export const login = (credentials, history) => {
     return dispatch => {
-        return fetch("/login/", {
-            mode: 'cors',
+        return fetch("http://localhost:3000/api/v1/login", {
             credentials: "include",
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                'Access-Control-Allow-Origin' : '*',
+                "Content-Type": "application/json"
               },
               body: JSON.stringify(credentials)
         })
@@ -75,7 +65,6 @@ export const login = (credentials, history) => {
         .catch(console.log)
     }
 }
-
 export const logout = () => {
     return dispatch => {
          dispatch(clearCurrentUser())
@@ -88,7 +77,6 @@ export const logout = () => {
         
     }
 }
-
 export const signup = (credentials, history) => {
     
     const body = {
@@ -102,7 +90,6 @@ export const signup = (credentials, history) => {
             password_confirmation: credentials.passwordConfirmation,
             bio: credentials.bio,
             role: parseInt(credentials.role)
-
         }
     }
     
