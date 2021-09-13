@@ -10,7 +10,7 @@ const BootstrapCarousel = () => {
   return(
 
     <div className="carousel-wrapper">
-      <Carousel infiniteLoop={true}  autoPlay={true}   interval={4000}      >
+      <Carousel infiniteLoop={true}  autoPlay={true}   interval={4000} showArrows={true} showThumbs={true}     >
           <div>
               <video id="carouselVideo" src={team} 
               type="video/mp4" 
